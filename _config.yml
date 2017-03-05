@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Neuro Coder"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Neuro-Coder"
+description              : "A site about coding, neuroscience and occasional posts about games and IoT."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -77,11 +77,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Lukáš Hejtmánek"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  bio              : "I am a neuroscience student in Prague, ASCR and NIMH. High school teacher, gamer and technology lover."
+  location         : "Prague"
+  email            : "hejtmy@neuro-coder.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -89,7 +89,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "hejtmy"
   google_plus      :
   keybase          :
   instagram        :
@@ -97,10 +97,10 @@ author:
   linkedin         :
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
-  steam            :
+  stackoverflow    : "6058105/lukáš-hejtmánek"
+  steam            : "hejtmy_"
   tumblr           :
-  twitter          :
+  twitter          : "hejtmy_"
   vine             :
   weibo            :
   xing             :

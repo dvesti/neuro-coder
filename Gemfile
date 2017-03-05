@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rake"
+gem "rake", "~> 10.1.1"
 gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do

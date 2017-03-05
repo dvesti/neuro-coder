@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>/basic/test/</loc>
+<lastmod>2015-11-17T22:16:01+00:00</lastmod>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/tags/ruby/</loc>
+</url>
+<url>
+<loc>/tags/code/</loc>
+</url>
+<url>
+<loc>/tags/stuff/</loc>
+</url>
+<url>
+<loc>/basic/</loc>
+</url>
+</urlset>

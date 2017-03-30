@@ -329,18 +329,17 @@
       <section class="page__content" itemprop="text">
         <p>In March I went to a talk by one of my colleagues at the Czech NIMH. He is a computer science major PhD student currently working for the IBM and focusing on games, emotions and cognitive sciences overall. He was giving a talk about IBM platform and how it can be to some extent used to decode human emotions and personality from a text. It sounded intriguing, so I immediately tried to give it a go.</p>
 
-<p>The presenter showed us a webapp to input all the texts and commands in, but I wasn’t for the love of god able to find it, so I retracted and decided to use my dear old R to do the work. Its better in the long run anyway :)</p>
+<p>The presenter showed us a webapp to input all the texts and commands in, but I wasn’t able to find it, so I decided to use my dear old R to do the work. Its better in the long run anyway :)</p>
 
-<p>During the presentation I created my account at <a href="https://console.ng.bluemix.net/dashboard/apps/">Bluemix</a>, went through infuriating and confusing setup of user, organisation, location and project to setup my first personality analyser.</p>
+<p>During the presentation I created my account at <a href="https://console.ng.bluemix.net/dashboard/apps/">Bluemix</a>, went through infuriating and confusing setup of user, organisation, location and project to start my first personality analyser.</p>
 
-<p>You then need to create a Personality Insights app to connect to and get your unique API username and password in service credentials.
+<p>After creating the account and all that, you need to create a Personality Insights app and get your unique API service credentials.
 <img src="/neuro-coder/assets/img/2017/bluemix-dashboard.png" alt="Creating personality insights service credentials" /></p>
 
-<p><strong>IMPORTANT</strong> You get the first 100 analysis calls for free, the rest are 1 USD per 50 calls.</p>
+<p><strong>IMPORTANT</strong> You get the first 100 analysis calls per month for free, the rest are 1 USD per 50 calls.</p>
 
 <div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">username</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"1xxxXX1x-xXx1-11111-xxxx-111xxxxx111"</span><span class="w"> </span><span class="c1"># your own here 
 </span><span class="n">password</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"XX1x1x11XX"</span><span class="w">  </span><span class="c1"># your own here 
-#the url is going to be slightly different
 </span></code></pre>
 </div>
 
@@ -382,7 +381,7 @@
 </code></pre>
 </div>
 
-<p>Back from the server you get JSON response, that you can use <code class="highlighter-rouge">jsonlite</code> package to parse. But when you look at the structure of the data using its prettified format - you can use the following code to parse the text:</p>
+<p>Server gives you JSON response, that you can parse with <code class="highlighter-rouge">jsonlite</code> package. But when you look at the structure of the data using its prettified format, it is quite nested.</p>
 
 <div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">jsonlite</span><span class="o">::</span><span class="n">prettify</span><span class="p">(</span><span class="n">response_text</span><span class="p">)</span><span class="w">
 </span></code></pre>
@@ -420,7 +419,7 @@
 </code></pre>
 </div>
 
-<p>It is quite nested. Luckily we have slightly more complicated yet in this case useful <a href="https://cran.r-project.org/web/packages/tidyjson/vignettes/introduction-to-tidyjson.html">tidyjson</a> package. They syntax is a bit more convoluted, but its better than dealing with the nested jsons by hand.</p>
+<p>Luckily we have slightly more complicated yet in this case useful <a href="https://cran.r-project.org/web/packages/tidyjson/vignettes/introduction-to-tidyjson.html">tidyjson</a> package. They syntax is a bit more convoluted, but its better than dealing with the nested jsons by hand.</p>
 
 <p>I extracted the <em>core</em> values with the following script</p>
 
@@ -435,10 +434,10 @@
 </span><span class="n">core_values</span><span class="o">$</span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">core_values</span><span class="o">$</span><span class="n">percentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="w">
 </span></code></pre>
 </div>
-<p>From there, you can get the Big5 simply by . So now we have Big5 percentiles in a <code class="highlighter-rouge">data.frame</code> and we can plot them.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
-</span><span class="n">ggplot2</span><span class="o">::</span><span class="n">ggplot</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">subtype</span><span class="p">,</span><span class="w"> </span><span class="n">percentage</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtype</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+<p>From there, you can get the Big5 core values simply by <code class="highlighter-rouge">big5 &lt;- core_values[core_values$type == "personality", ]</code>. So now we have Big5 percentiles in a <code class="highlighter-rouge">data.frame</code> and we can plot them.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">ggplot2</span><span class="o">::</span><span class="n">ggplot</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">subtype</span><span class="p">,</span><span class="w"> </span><span class="n">percentage</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtype</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
   </span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"identity"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
    </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Big five personality trait"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Percentile"</span><span class="p">)</span><span class="w">
 </span></code></pre>
@@ -446,7 +445,7 @@
 
 <p><img src="/neuro-coder/assets/fig/watson-big5.png" alt="" /><!-- --></p>
 
-<p>Well, its as easy as that. In the end I just redone all of it into one function, but it is more instructive to go through it step by step. So give it a go yourselves!</p>
+<p>And its as easy as that. In the end I just put all of it into two functions, but it is more instructive to go through it step by step. So give the tranfomration go yourselves!</p>
 
 <p>Entire gist with some extras is here:</p>
 

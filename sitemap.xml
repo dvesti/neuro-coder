@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/neuro-coder/psychology/R-watson-personality/</loc>
+<loc>/psychology/R-watson-personality/</loc>
 <lastmod>2017-03-10T15:16:01+00:00</lastmod>
 </url>
 <url>
-<loc>/neuro-coder/about/</loc>
+<loc>/about/</loc>
 </url>
 <url>
-<loc>/neuro-coder/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>/neuro-coder/tags/r/</loc>
+<loc>/tags/r/</loc>
 </url>
 <url>
-<loc>/neuro-coder/tags/machine-learning/</loc>
+<loc>/tags/machine-learning/</loc>
 </url>
 <url>
-<loc>/neuro-coder/tags/bluemix/</loc>
+<loc>/tags/bluemix/</loc>
 </url>
 <url>
-<loc>/neuro-coder/tags/ibm/</loc>
+<loc>/tags/ibm/</loc>
 </url>
 <url>
-<loc>/neuro-coder/psychology/</loc>
+<loc>/psychology/</loc>
 </url>
 </urlset>

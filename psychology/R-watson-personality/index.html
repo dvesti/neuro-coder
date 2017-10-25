@@ -341,23 +341,21 @@
 
 <p><strong>IMPORTANT</strong> You get the first 100 analysis calls per month for free, the rest are 1 USD per 50 calls.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">username</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"1xxxXX1x-xXx1-11111-xxxx-111xxxxx111"</span><span class="w"> </span><span class="c1"># your own here 
-</span><span class="n">password</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"XX1x1x11XX"</span><span class="w">  </span><span class="c1"># your own here 
-</span></code></pre>
-</div>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">username</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"1xxxXX1x-xXx1-11111-xxxx-111xxxxx111"</span><span class="w"> </span><span class="c1"># your own here </span><span class="w">
+</span><span class="n">password</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"XX1x1x11XX"</span><span class="w">  </span><span class="c1"># your own here </span><span class="w">
+</span></code></pre></div></div>
 
 <p>You need some text to give it, so I went with a text I had laying around in my folder, but you can pass it anything. I just recommend removing html tags, newline chars etc. We only want to anlyse the text.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">path</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"example.txt"</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">path</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"example.txt"</span><span class="w">
 </span><span class="n">TEXT</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readChar</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">file.info</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">$</span><span class="n">size</span><span class="p">)</span><span class="w">
-</span><span class="c1">#removing newline characters etc.
+</span><span class="c1">#removing newline characters etc.</span><span class="w">
 </span><span class="n">TEXT</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"[\r\n\t]"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <p>Then I wrote a simple httr function to make a POST request to the server. It was slightly more complicated than I first thought, because bluemix changed from v2 to v3 during January 2017. Using v3 now requires parameter version to be passed to the URL, othervise you get <code class="highlighter-rouge">400 ERROR</code>. All is quite well covered in Personality Insight <a href="https://www.ibm.com/watson/developercloud/personality-insights/api/v3/?curl#profile">API reference</a>.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">httr</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">httr</span><span class="p">)</span><span class="w">
 </span><span class="n">call_watson</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">,</span><span class="w"> </span><span class="n">text</span><span class="p">){</span><span class="w">
   </span><span class="nf">return</span><span class="p">(</span><span class="n">POST</span><span class="p">(</span><span class="w">
     </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://gateway.watsonplatform.net/personality-insights/api/v3/profile?version=2016-10-20"</span><span class="p">,</span><span class="w">
@@ -366,30 +364,26 @@
     </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w">
   </span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <p>We can then get the content with simple <code class="highlighter-rouge">response &lt;- call_watson(username, password, TEXT)</code>. The response is in utf8 encoding, so we need to covert it back to text.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">response_text</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">intToUtf8</span><span class="p">(</span><span class="n">response</span><span class="o">$</span><span class="n">content</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response_text</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">intToUtf8</span><span class="p">(</span><span class="n">response</span><span class="o">$</span><span class="n">content</span><span class="p">)</span><span class="w">
 </span><span class="n">response_text</span><span class="w">
-</span></code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>## [1] "{\"id\":\"*UNKNOWN*\",\"source\":\"*UNKNOWN*\",\"word_count\":649,\"processed_lang\":\"en\",\"tree\":{\"id\":\"r\",
+</span></code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1] "{\"id\":\"*UNKNOWN*\",\"source\":\"*UNKNOWN*\",\"word_count\":649,\"processed_lang\":\"en\",\"tree\":{\"id\":\"r\",
 \"name\":\"root\",\"children\":[{\"id\":\"personality\",\"name\":\"Big 5\",\"children\":[{\"id\":\"Openness_parent\",
 \"name\":\"Openness\",\"category\":\"personality\",\"percentage\":0.9956122175799985,\"children\":[{\"id\":\"Openness\",
 \"name\":\"Openness\",\"category\":\"personality\",\"percentage\":0.9956122175799985,\"sampling_error\":0.060647148399999996,
 \"children\":[{\"id\":\"Adventurousness\",\"name\":\"Adventurousness\",\"category\":\"personality\",\"percentage\":0.5327229012181444,
 \"sampling_error\":0.0513245932}, etc."
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Server gives you JSON response, that you can parse with <code class="highlighter-rouge">jsonlite</code> package. But when you look at the structure of the data using its prettified format, it is quite nested.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">jsonlite</span><span class="o">::</span><span class="n">prettify</span><span class="p">(</span><span class="n">response_text</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>## {
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jsonlite</span><span class="o">::</span><span class="n">prettify</span><span class="p">(</span><span class="n">response_text</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## {
 ##     "id": "*UNKNOWN*",
 ##     "source": "*UNKNOWN*",
 ##     "word_count": 649,
@@ -419,14 +413,13 @@
 ##                                         "id": "Adventurousness",
 ##                                         "name": "Adventurousness",
 ## etc.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Luckily we have slightly more complicated yet in this case useful <a href="https://cran.r-project.org/web/packages/tidyjson/vignettes/introduction-to-tidyjson.html">tidyjson</a> package. They syntax is a bit more convoluted, but its better than dealing with the nested jsons by hand.</p>
 
 <p>I extracted the <em>core</em> values with the following script</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidyjson</span><span class="p">)</span><span class="w">
 </span><span class="n">core_values</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">response_text</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">enter_object</span><span class="p">(</span><span class="s2">"tree"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
   </span><span class="n">enter_object</span><span class="p">(</span><span class="s2">"children"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">gather_array</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
@@ -435,16 +428,14 @@
   </span><span class="n">enter_object</span><span class="p">(</span><span class="s2">"children"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">gather_array</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">spread_values</span><span class="p">(</span><span class="n">subtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jstring</span><span class="p">(</span><span class="s2">"name"</span><span class="p">),</span><span class="w"> </span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jnumber</span><span class="p">(</span><span class="s2">"percentage"</span><span class="p">))</span><span class="w">
 </span><span class="n">core_values</span><span class="o">$</span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">core_values</span><span class="o">$</span><span class="n">percentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <p>From there, you can get the Big5 core values simply by <code class="highlighter-rouge">big5 &lt;- core_values[core_values$type == "personality", ]</code>. So now we have Big5 percentiles in a <code class="highlighter-rouge">data.frame</code> and we can plot them.</p>
 
-<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">ggplot2</span><span class="o">::</span><span class="n">ggplot</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">subtype</span><span class="p">,</span><span class="w"> </span><span class="n">percentage</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtype</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot2</span><span class="o">::</span><span class="n">ggplot</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">subtype</span><span class="p">,</span><span class="w"> </span><span class="n">percentage</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtype</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
   </span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"identity"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
    </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Big five personality trait"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Percentile"</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <p><img src="/assets/fig/watson-big5.png" alt="" /><!-- --></p>
 

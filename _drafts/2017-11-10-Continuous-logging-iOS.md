@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Continous logging to text file in swift"
+title:  "Continous logging to a text file in Swift"
 date:   2017-11-10 16:16:01 +0100
 categories: coding
 tags: ios apple swift

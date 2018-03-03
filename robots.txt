@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: http://neuro-coder.com/sitemap.xml

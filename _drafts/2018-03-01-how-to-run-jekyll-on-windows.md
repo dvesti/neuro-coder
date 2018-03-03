@@ -1,9 +1,9 @@
 ---
 layout: single
-title:  " On the subject of manuals: Board games and coding"
+title:  "How to run jekyll on windows"
 date:   2017-06-02 16:16:01 +0100
 categories: coding boardgames
-tags: Hugo programming coding personal
+tags: jekyll ruby windows chocolately programming coding personal
 ---
 
 

@@ -1,12 +1,12 @@
 ---
 layout: single
 title:  "I wrote a function to provide results for my PhD thesis"
-date:   2017-03-01 16:16:01 +0100
+date:   2018-03-01 16:16:01 +0100
 categories: PhD
 tags: R python javascript Ruby C# fun 
 ---
 
-After struggling with my EEG analyses for quite some time, I got an idea to represent my efforts in multiple programming languages. This is to at lease showcase, that I learned something, if not analysing data properly.
+This is how neuroscience feels in python.
 
 ```python
 from enum import Enum

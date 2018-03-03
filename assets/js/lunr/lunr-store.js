@@ -9,8 +9,8 @@ var store = [{
         "tags": ["teaching","R","programming","coding","personal"],
         "url": "/coding/intro-to-programming/",
         "teaser":null},{
-        "title": "I wrote a function to provide results for my PhD thesis",
+        "title": "Python explains what is it like to do be a graduate in neuroscience",
         "excerpt":"This is how neuroscience feels in python.from enum import Enum#got his function from supervisor, no idea what it doesfrom god import random_magicclass DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data) def provide_results(data): if(data.type == DataType.CRAP):...","categories": ["PhD"],
         "tags": ["phd","neuroscience","python","fun"],
-        "url": "/phd/Function-for-phd-results/",
+        "url": "/phd/neuroscience-phd-python/",
         "teaser":null}]

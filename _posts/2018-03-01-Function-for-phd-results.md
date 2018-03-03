@@ -3,6 +3,7 @@ layout: single
 title:  "I wrote a function to provide results for my PhD thesis"
 date:   2018-03-01 16:16:01 +0100
 categories: PhD
+comments: true
 tags: phd neuroscience python fun 
 ---
 

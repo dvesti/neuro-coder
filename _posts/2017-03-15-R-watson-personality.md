@@ -4,6 +4,7 @@ title:  "Reading personality traits from between the lines with IBM Watson"
 date:   2017-3-10 16:16:01 +0100
 categories: Psychology
 tags: R machine-learning bluemix IBM
+comments: true
 ---
 In March I went to a talk by one of my colleagues at the Czech NIMH. He is a computer science major PhD student currently working for the IBM and focusing on games, emotions and cognitive sciences overall. He was giving a talk about IBM platform and how it can be to some extent used to decode human emotions and personality from a text. It sounded intriguing, so I immediately tried to give it a go.
 

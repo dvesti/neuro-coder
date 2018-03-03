@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.7.0 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
 -->
@@ -9,39 +9,16 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>bluemix - Neuro Coder</title>
-
-
-
-
+<!-- begin _includes/seo.html --><title>bluemix - Neuro Coder</title>
 <meta name="description" content="A site about coding, neuroscience and occasional posts about games and IoT.">
 
 
 
-
-<meta name="author" content="Lukáš Hejtmánek">
-
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Neuro Coder">
 <meta property="og:title" content="bluemix">
-
-
-
-
-
-
-
-
+<meta property="og:url" content="/tags/bluemix/">
 
 
 
@@ -59,9 +36,7 @@
   
 
 
-
-
-
+<link rel="canonical" href="/tags/bluemix/">
 
 
 
@@ -71,11 +46,11 @@
 
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Neuro-Coder",
-      "url" : null,
-      "sameAs" : null
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Neuro-Coder",
+      "url": null,
+      "sameAs": null
     }
   </script>
 
@@ -85,7 +60,7 @@
 
 
 
-<!-- end SEO -->
+<!-- end _includes/seo.html -->
 
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Neuro Coder Feed">
@@ -128,8 +103,9 @@
   <body class="layout--archive-taxonomy">
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
+
     <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -138,10 +114,13 @@
         <ul class="visible-links">
           
             
-            <li class="masthead__menu-item"><a href="/about/">About</a></li>
+            <li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li>
           
         </ul>
-        <button type="button">
+        
+        <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle Menu</span>
           <div class="navicon"></div>
         </button>
@@ -151,7 +130,8 @@
   </div>
 </div>
 
-    <div id="main" role="main">
+    <div class="initial-content">
+      <div id="main" role="main">
   
 
   <div class="archive">
@@ -171,7 +151,7 @@
       
     </h2>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
@@ -185,6 +165,9 @@
     
   </div>
 </div>
+    </div>
+
+    
 
     <div class="page__footer">
       <footer>
@@ -199,35 +182,23 @@
     
     
     
-      <li><a href="http://github.com/hejtmy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/hejtmy"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
     
-    <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2017 Neuro-Coder. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-
-
-
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-91041891-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 

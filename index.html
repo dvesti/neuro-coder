@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.7.0 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
 -->
@@ -9,39 +9,16 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>Neuro Coder</title>
-
-
-
-
+<!-- begin _includes/seo.html --><title>Neuro Coder</title>
 <meta name="description" content="A site about coding, neuroscience and occasional posts about games and IoT.">
 
 
 
-
-<meta name="author" content="Lukáš Hejtmánek">
-
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Neuro Coder">
 <meta property="og:title" content="Neuro Coder">
-
-
-
-
-
-
-
-
+<meta property="og:url" content="/">
 
 
 
@@ -59,9 +36,7 @@
   
 
 
-
-
-
+<link rel="canonical" href="/">
 
 
 
@@ -71,11 +46,11 @@
 
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Neuro-Coder",
-      "url" : null,
-      "sameAs" : null
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Neuro-Coder",
+      "url": null,
+      "sameAs": null
     }
   </script>
 
@@ -85,7 +60,7 @@
 
 
 
-<!-- end SEO -->
+<!-- end _includes/seo.html -->
 
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Neuro Coder Feed">
@@ -128,8 +103,9 @@
   <body class="layout--home">
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
+
     <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -138,10 +114,13 @@
         <ul class="visible-links">
           
             
-            <li class="masthead__menu-item"><a href="/about/">About</a></li>
+            <li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li>
           
         </ul>
-        <button type="button">
+        
+        <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle Menu</span>
           <div class="navicon"></div>
         </button>
@@ -151,7 +130,8 @@
   </div>
 </div>
 
-    
+    <div class="initial-content">
+      
 
 
 
@@ -160,12 +140,15 @@
   <div class="sidebar sticky">
   
 
+
 <div itemscope itemtype="http://schema.org/Person">
 
   
 
   <div class="author__content">
-    <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
+    
+      <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
+    
     
       <p class="author__bio" itemprop="description">
         I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side.
@@ -178,7 +161,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">Prague</span>
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Prague</span>
         </li>
       
 
@@ -188,7 +171,7 @@
         <li>
           <a href="mailto:hejtmy@neuro-coder.com">
             <meta itemprop="email" content="hejtmy@neuro-coder.com" />
-            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
           </a>
         </li>
       
@@ -198,7 +181,7 @@
       
         <li>
           <a href="https://twitter.com/hejtmy_" itemprop="sameAs">
-            <i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
           </a>
         </li>
       
@@ -214,7 +197,7 @@
       
         <li>
           <a href="https://instagram.com/neurocoder" itemprop="sameAs">
-            <i class="fa fa-fw fa-instagram" aria-hidden="true"></i> Instagram
+            <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
           </a>
         </li>
       
@@ -226,7 +209,7 @@
       
         <li>
           <a href="https://github.com/hejtmy" itemprop="sameAs">
-            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
           </a>
         </li>
       
@@ -236,7 +219,7 @@
       
         <li>
           <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs">
-            <i class="fa fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
+            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
           </a>
         </li>
       
@@ -252,7 +235,7 @@
       
         <li>
           <a href="https://steamcommunity.com/id/hejtmy_" itemprop="sameAs">
-            <i class="fa fa-fw fa-steam-square" aria-hidden="true"></i> Steam
+            <i class="fab fa-fw fa-steam" aria-hidden="true"></i> Steam
           </a>
         </li>
       
@@ -272,7 +255,7 @@
       <!--
   <li>
     <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
 -->
@@ -300,12 +283,40 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="/phd/Function-for-phd-results/" rel="permalink">I wrote a function to provide results for my PhD thesis
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
+
+</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="/coding/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
@@ -332,7 +343,7 @@ Once at a high school, I decided to demonstrate to students, why they should use
       
     </h2>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
@@ -350,6 +361,9 @@ Once at a high school, I decided to demonstrate to students, why they should use
 
   </div>
 </div>
+    </div>
+
+    
 
     <div class="page__footer">
       <footer>
@@ -364,35 +378,23 @@ Once at a high school, I decided to demonstrate to students, why they should use
     
     
     
-      <li><a href="http://github.com/hejtmy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/hejtmy"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
     
-    <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2017 Neuro-Coder. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-
-
-
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-91041891-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 

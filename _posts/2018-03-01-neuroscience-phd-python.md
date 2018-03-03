@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "I wrote a function to provide results for my PhD thesis"
+title:  "Python explains what is it like to do be a graduate in neuroscience"
 date:   2018-03-01 16:16:01 +0100
 categories: PhD
 comments: true

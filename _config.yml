@@ -19,16 +19,16 @@ title                    : "Neuro Coder"
 title_separator          : "-"
 name                     : "Neuro-Coder"
 description              : "A site about coding, neuroscience and occasional posts about games and IoT."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://neuro-coder.com"
 baseurl                  : ""
-repository               : "hejtmy/neuro-coder"
+repository               : ihejtmy/neuro-coder"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" 
+  provider               : disqus
   disqus:
-    shortname            : "neuro-coder"
+    shortname            : neuro-coder
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:

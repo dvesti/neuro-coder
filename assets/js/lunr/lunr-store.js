@@ -9,7 +9,7 @@ var store = [{
         "tags": ["teaching","R","programming","coding","personal"],
         "url": "http://neuro-coder.com/coding/intro-to-programming/",
         "teaser":null},{
-        "title": "Python explains what is it like to be a graduate student in neuroscience",
+        "title": "Python explains what it is like to be a graduate student in neuroscience",
         "excerpt":"This is how neuroscience feels in python.from enum import Enum#got his function from supervisor, no idea what it doesfrom god import random_magicclass DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data) def provide_results(data): if(data.type == DataType.CRAP):...","categories": ["PhD"],
         "tags": ["phd","neuroscience","python","fun"],
         "url": "http://neuro-coder.com/phd/neuroscience-phd-python/",

@@ -1,0 +1,657 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to send information from Unity to a web browser - part I. - Neuro Coder</title>
+<meta name="description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Neuro Coder">
+<meta property="og:title" content="How to send information from Unity to a web browser - part I.">
+<meta property="og:url" content="http://neuro-coder.com/gamedev/sending-information-unity-browser/">
+
+
+  <meta property="og:description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-03-22T15:16:01+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://neuro-coder.com/gamedev/sending-information-unity-browser/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Neuro-Coder",
+      "url": "http://neuro-coder.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Neuro Coder Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Neuro Coder</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://neuro-coder.com/about/" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://neuro-coder.com/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/gamedev" itemprop="item"><span itemprop="name">Gamedev</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">How to send information from Unity to a web browser - part I.</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Prague</span>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hejtmy@neuro-coder.com">
+            <meta itemprop="email" content="hejtmy@neuro-coder.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/hejtmy_" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://instagram.com/neurocoder" itemprop="sameAs">
+            <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/hejtmy" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs">
+            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://steamcommunity.com/id/hejtmy_" itemprop="sameAs">
+            <i class="fab fa-fw fa-steam" aria-hidden="true"></i> Steam
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to send information from Unity to a web browser - part I.">
+    <meta itemprop="description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)">
+    <meta itemprop="datePublished" content="March 22, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">How to send information from Unity to a web browser - part I.
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)</p>
+
+<p>Our expeirments are usually FPS games, either in VR or a poor man’s desktop versions. So I decided to use some internet magic and push information from the game engine to a web server which displays exactly what is going on :)</p>
+
+<h2 id="environment-setup">Environment setup</h2>
+
+<p>Most of our experiemnts are run in unity, so that is what I am gonna provide my code for. As for the web server part, I went with node and Express, not necessarily because they are the best, but I quite like javascript, I hate php and most importantly, I don’t know Express :D So this is gonna be a self initiation road for me as well :)</p>
+
+<p>I setup express as per mozzila instructions <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">here</a> and booted it up. Cool :) We have a listening server.</p>
+
+<p>Next I dabbled in what shoudl I use as an listening protocol - TCP packets? UDP? in all honesty, as much as I want to learn Express, I have no wish in dealing with these sort of traffic protocols. Given I expect only a single stream to be communicating at the same time and Express shoudl be able to handle several requests hundreds per second, I can just do pure RESTful API.</p>
+
+<h3 id="express">Express</h3>
+
+<p>First we need to start routing all that unity traffic. I am building all in index so far. App.js so far untouched. So let’s listen to post requests:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//index.js</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">({});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="unity">Unity</h3>
+
+<p>And then we need a controller in Unity that is gonna send that request. I went with simple dictionary of strings that is conveniently convented to javascript object on reception. Because web serving is async, we need enumerator for that unless you wnat your game to freeze until response is received. Be mindful that this is unity specific implementation and your classes and ways of instantiating enumerators might differ.</p>
+
+<p>This will basically send a dummy POST with <em>{“dict-key”, “dict-value”}</em> object to the server. Test it out and see that express is indeed receiving and returning POST answers.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">public</span> <span class="kt">string</span> <span class="n">url</span> <span class="p">=</span> <span class="s">"http://localhost:8080"</span><span class="p">;</span>
+
+    <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="nf">GetKeyDown</span><span class="p">(</span><span class="n">KeyCode</span><span class="p">.</span><span class="n">F3</span><span class="p">))</span> <span class="nf">SendInfo</span><span class="p">(</span><span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;{</span><span class="err">\</span><span class="p">{</span><span class="s">"dict-key"</span><span class="p">,</span> <span class="s">"dict-value"</span><span class="err">\</span><span class="p">}});</span>
+    <span class="p">}</span>
+
+    <span class="n">IEnumerator</span> <span class="nf">SendPOST</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">dict</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">form</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">WWWForm</span><span class="p">();</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">di</span> <span class="k">in</span> <span class="n">dict</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">form</span><span class="p">.</span><span class="nf">AddField</span><span class="p">(</span><span class="n">di</span><span class="p">.</span><span class="n">Key</span><span class="p">,</span> <span class="n">di</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// Upload to a cgi script</span>
+        <span class="kt">var</span> <span class="n">w</span> <span class="p">=</span> <span class="n">UnityWebRequest</span><span class="p">.</span><span class="nf">Post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">form</span><span class="p">);</span>
+        <span class="k">yield</span> <span class="k">return</span> <span class="n">w</span><span class="p">.</span><span class="nf">Send</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">isNetworkError</span> <span class="p">||</span> <span class="n">w</span><span class="p">.</span><span class="n">isHttpError</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">error</span><span class="p">);</span>
+        <span class="k">else</span> <span class="nf">print</span><span class="p">(</span><span class="s">"Finished POST"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">SendInfo</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">info</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nf">StartCorouting</span><span class="p">(</span><span class="nf">SendPOST</span><span class="p">(</span><span class="n">info</span><span class="p">));</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="listening-and-sockets">Listening and sockets</h2>
+
+<p>We are already listening in node. But there is a problem. Server is listening, but client (your browser) knows nothing about the events that are happening in node. We need a way to push notification and these changes to anybody interested. And we will do that with <a href="https://github.com/socketio/socket.io-client">socket.io</a>. If you don’t have it already, you can install them using <code class="highlighter-rouge">npm install socket.io</code>.</p>
+
+<p>Sockets allow us to “subscribe” to events and incomming data and run functions that change DOM. It works on everything but Edge (really, whf Microsoft). We need to slightly change the server settings in app.js and in our view as well. The node server received POST in <em>index.js</em> is emited to the client <em>incomming.js</em>. We lastly load sockets and incomming in view.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//app.js</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">).</span><span class="nx">Server</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+<span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'socket.io'</span><span class="p">)(</span><span class="nx">server</span><span class="p">);</span> <span class="c1">//no var initialisation makes sure io is available in controllers as well</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">);</span>
+
+<span class="c1">//index.js</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+  <span class="nx">io</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'unityEvent'</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">({});</span>
+<span class="p">});</span>
+<span class="c1">//incomming.js</span>
+<span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">();</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'unityEvent'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'event received'</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'position'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="c1">//index.pug</span>
+<span class="nx">script</span><span class="p">(</span><span class="nx">src</span><span class="o">=</span><span class="s2">"/socket.io/socket.io.js"</span><span class="p">)</span>
+<span class="nx">script</span><span class="p">(</span><span class="nx">src</span><span class="o">=</span><span class="s1">'javascripts/incomming.js'</span><span class="p">)</span>
+<span class="nx">block</span> <span class="nx">content</span>
+  <span class="nx">h1</span><span class="o">=</span> <span class="nx">title</span>
+  <span class="nx">p</span> <span class="nx">Welcome</span> <span class="nx">to</span> <span class="err">#</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span>
+
+  <span class="nx">div</span><span class="err">#</span><span class="nx">position</span>
+</code></pre></div></div>
+
+<p>With these changes, our work is simply done :) There after pressing F3 in unity you will see the value in DOM div #position change. It is time for you to change what you want to send over - new trials times, position etc. Just beware of overposting! NEVER send these requests in Update. 5 requests in 1 second is fine, 200 might be a bit challenging :)</p>
+
+<p>I’ll write a follow-up about displaying player position and other features using <em>p5</em>, which is gonna be fun as well. If you have any questions, don’t hesitate on leaving them down in the comments.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/node" class="page__taxonomy-item" rel="tag">node</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/science" class="page__taxonomy-item" rel="tag">science</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/unity" class="page__taxonomy-item" rel="tag">unity</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/gamedev" class="page__taxonomy-item" rel="tag">gamedev</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-03-22T15:16:01+00:00">March 22, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+send+information+from+Unity+to+a+web+browser+-+part+I.%20http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/phd/neuroscience-phd-python/" class="pagination--pager" title="Python explains what it is like to be a graduate student in neuroscience
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/phd/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/coding/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PROGRAMMING BASICS
+Once at a high school, I decided to demonstrate to students, why they should use R instead of Excel for their psychology statistics, and g...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/psychology/R-watson-personality/" rel="permalink">Reading personality traits from between the lines with IBM Watson
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In March I went to a talk by one of my colleagues at the Czech NIMH. He is a computer science major PhD student currently working for the IBM and focusing on...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/hejtmy"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

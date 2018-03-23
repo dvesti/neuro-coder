@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"This is how neuroscience feels in python. from enum import Enum#got his function from supervisor, no idea what it doesfrom god import random_magicclass DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data) def provide_results(data): if(data.type ==...","categories": ["PhD"],
         "tags": ["phd","neuroscience","python","fun"],
         "url": "http://neuro-coder.com/phd/neuroscience-phd-python/",
+        "teaser":null},{
+        "title": "How to send information from Unity to a web browser - part I.",
+        "excerpt":"When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance...","categories": ["gamedev"],
+        "tags": ["unity","node","science"],
+        "url": "http://neuro-coder.com/gamedev/sending-information-unity-browser/",
         "teaser":null}]

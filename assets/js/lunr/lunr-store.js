@@ -5,12 +5,12 @@ var store = [{
         "url": "http://neuro-coder.com/psychology/R-watson-personality/",
         "teaser":null},{
         "title": "What I would like to have known when I started coding",
-        "excerpt":"PROGRAMMING BASICSOnce at a high school, I decided to demonstrate to students, why they should use R instead of Excel for their psychology statistics, and got some of them intrigued. So when I planned my first lesson, oblivious to what experience and approach I can expect, I started to wonder....","categories": ["Coding"],
+        "excerpt":"PROGRAMMING BASICS Once at a high school, I decided to demonstrate to students, why they should use R instead of Excel for their psychology statistics, and got some of them intrigued. So when I planned my first lesson, oblivious to what experience and approach I can expect, I started to...","categories": ["Coding"],
         "tags": ["teaching","R","programming","coding","personal"],
         "url": "http://neuro-coder.com/coding/intro-to-programming/",
         "teaser":null},{
         "title": "Python explains what it is like to be a graduate student in neuroscience",
-        "excerpt":"This is how neuroscience feels in python.from enum import Enum#got his function from supervisor, no idea what it doesfrom god import random_magicclass DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data) def provide_results(data): if(data.type == DataType.CRAP):...","categories": ["PhD"],
+        "excerpt":"This is how neuroscience feels in python. from enum import Enum#got his function from supervisor, no idea what it doesfrom god import random_magicclass DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data) def provide_results(data): if(data.type ==...","categories": ["PhD"],
         "tags": ["phd","neuroscience","python","fun"],
         "url": "http://neuro-coder.com/phd/neuroscience-phd-python/",
         "teaser":null}]

@@ -4,6 +4,7 @@ title: "How to send information from Unity to a web browser - part I."
 date: 2018-03-22 16:16:01 +0100
 tags: unity node science
 categories: gamedev
+comments: true
 ---
 
 When you'are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)

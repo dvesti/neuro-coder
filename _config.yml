@@ -21,7 +21,7 @@ name                     : "Neuro-Coder"
 description              : "A site about coding, neuroscience and occasional posts about games and IoT."
 url                      : "http://neuro-coder.com"
 baseurl                  : ""
-repository               : ihejtmy/neuro-coder"
+repository               : "hejtmy/neuro-coder"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200

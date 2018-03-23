@@ -16,7 +16,7 @@ Most of our experiemnts are run in unity, so that is what I am gonna provide my 
 
 I setup express as per mozzila instructions [here](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment) and booted it up. Cool :) We have a listening server.
 
-Next I dabbled in what shoudl I use as an listening protocol - TCP packets? UDP? in all honesty, as much as I want to learn Express, I have no wish in dealing with these sort of traffic protocols. Given I expect only a single stream to be communicating at the same time and Express shoudl be able to handle several requests hundreds per second, I can just do pure RESTful API.
+Next I dabbled in what shoudl I use as an listening protocol - TCP packets? UDP? in all honesty, as much as I want to learn Express, I have no wish in dealing with these sort of traffic protocols. Given I expect only a single stream to be communicating at the same time and Express shoudl be able to handle several hundreds requests per second, I can just do pure RESTful API.
 
 ### Express
 
@@ -32,9 +32,9 @@ router.post('/', function(req, res, next){
 
 ### Unity
 
-And then we need a controller in Unity that is gonna send that request. I went with simple dictionary of strings that is conveniently convented to javascript object on reception. Because web serving is async, we need enumerator for that unless you wnat your game to freeze until response is received. Be mindful that this is unity specific implementation and your classes and ways of instantiating enumerators might differ.
+And then we need a controller in Unity that is gonna send that request. I went with simple dictionary of strings that is conveniently convented to javascript object on reception. Because web serving is async, we need enumerator for that unless you want your game to freeze until response is received. Be mindful that this is Unity specific implementation and your classes and ways of instantiating enumerators might differ.
 
-This will basically send a dummy POST with *{"dict-key", "dict-value"}* object to the server. Test it out and see that express is indeed receiving and returning POST answers.
+This will basically send a dummy POST with *{"dict-key", "dict-value"}* object to the server. Test it out and see that Express is indeed receiving and returning POST answers.
 
 ```c#
     public string url = "http://localhost:8080";
@@ -67,9 +67,9 @@ This will basically send a dummy POST with *{"dict-key", "dict-value"}* object t
 
 ## Listening and sockets
 
-We are already listening in node. But there is a problem. Server is listening, but client (your browser) knows nothing about the events that are happening in node. We need a way to push notification and these changes to anybody interested. And we will do that with [socket.io](https://github.com/socketio/socket.io-client). If you don't have it already, you can install them using `npm install socket.io`.
+We are already listening in node. But there is a problem. Server is listening, but client (your browser), knows nothing about the events that are happening in node. We need a way to push notification and these changes to anybody interested. And we will do that with [socket.io](https://github.com/socketio/socket.io-client). If you don't have it already, you can install sockets using `npm install socket.io`.
 
-Sockets allow us to "subscribe" to events and incomming data and run functions that change DOM. It works on everything but Edge (really, whf Microsoft). We need to slightly change the server settings in app.js and in our view as well. The node server received POST in *index.js* is emited to the client *incomming.js*. We lastly load sockets and incomming in view.
+Sockets allow us to "subscribe" to events and incomming data and run functions that change DOM. It works on everything but Edge (really, wth Microsoft). We need to slightly change the server settings in app.js and in our view as well. The node server received POST in *index.js* is emited to the client *incomming.js*. We lastly load sockets and incomming.js in the view.
 
 ```javascript
 //app.js
@@ -102,6 +102,6 @@ block content
   div#position
 ```
 
-With these changes, our work is simply done :) There after pressing F3 in unity you will see the value in DOM div #position change. It is time for you to change what you want to send over - new trials times, position etc. Just beware of overposting! NEVER send these requests in Update. 5 requests in 1 second is fine, 200 might be a bit challenging :)
+With these changes, our work is simply done :) After pressing F3 in Unity you will see the value in DOM div #position change. It is time for you to change what you want to send over - new trials times, position etc. Just beware of overposting! NEVER send these requests in Update. 5 requests in 1 second is fine, 200 might be a bit challenging :)
 
-I'll write a follow-up about displaying player position and other features using *p5*, which is gonna be fun as well. If you have any questions, don't hesitate on leaving them down in the comments.
+I'll write a follow-up about displaying player position and other features using javascript *p5*, which is gonna be fun as well. If you have any questions, don't hesitate on leaving them down in the comments.

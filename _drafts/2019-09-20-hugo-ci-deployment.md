@@ -6,20 +6,12 @@ categories: hugo blog
 tags: hugo travis CI blog golang go
 ---
 
+http://rcoedo.com/post/hugo-static-site-generator/
 
+But I didn¨t want to use speciall ssh acces for travies if ithub has the amazing personal repo tokens. I found another tutorial, but this one for some rason wanted another tutorial, but this one for some rason wanted me to build my own hugo libraries. I understand the benefit of that (as sometimes we don't update hugo as often as we should¨, but eventually i dcided to make the better of the both worlds. So I used the second deploy script and used modifid travis file to build the hugo libraries on the fly.
 
-## Troubleshooting
-Q: This page isn't working. 127.0.0.1 sent and invalid response. ERR_INVALID_HTTP_RESPONSE
-A: This is probably becasue you have another process running on Jekyll's port that is not serving HTTP files. You can easilly set the `jekyll serve --port 4001` and see if that works.
+http://speps.github.io/articles/hugo-setup/
 
-**Q: You have already activated *gem-name version-number*, but your Gemfile requires *gem-name - different version-number* **
-A: This happens when you have installed some gems through `gem install` that is newer than jekyll gemfile requires with `~>`. Sometimes jekyll will already tell you what to do. You need to run jekyll with gem specified by the Gemfile, so you run it as `bundle exec jekyll serve`
+Overall, it was similarly easy to deploy as jekyll deployment throught tavis
 
-**Q: cannot load such file -- bundler**
-A: This might have to do with reinstalling or upgrading ruby, where you 'forgot' to install bundler after getting the ruby executable. Just run `gem install bundler`
-
-**Q: Jekyll claims gems are missings.**
-A: If you are running on windows, it is possible that the first time you ran bundle install, some gems weren't properly isntalled. Just follow the recommendation above on how to solve some windows issues. If that is still the case, you can run `bundle install --force` to force reinstall all gems. This usually solves the issue.
-
-**Q: Could not find *gem-name* in any of the sources (Bundler::GemNotFound)**
-A: This can happen if the bundler got corrupted or wasn¨t working properly when you first ran `bundle install`. You can update bundler with `gem install bundler` and then run `bundle update` or `bundle install --force`.
+What tripped me a bit was that I wanted to use a custom CNAME, but each deployment was overwriting the file. To be entirely hones, I never go to the shell scripting, so I have little idea what that deployment script does, but I am somewhat skilled in linux and good at copy paste, so I simply added `echo "brain.vr" > public/CNAME` into the after script with travis, which solves the problem quite efficiently.

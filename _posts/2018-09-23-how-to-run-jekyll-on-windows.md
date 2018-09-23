@@ -12,13 +12,15 @@ More technically, Jekyll is a ruby gem. It is fairly straightforward to run it o
 
 [Chocolatey](https://chocolatey.org/) brings to CMD what programmers love about shell - it allows installing useful software and packages (like python, mysql etc.) with simple syntax. It basically does what you'd do yourself by downloading executables, dependencies and registering environment variables yourself and then streamlines updates to installed packages, pays attention to updated dependencies and all. It is simply a must have on Windows.
 
+![]({{site.baseurl}}/assets/img/2018/jekyll-windows/hackerman.jpg)
+
 ## How to do it
 To run jekyll, we first need Ruby and we need bundler. Ruby is a objective programming language and bundle is a Ruby Gem (think like a ruby package).
 
 **IMPORTANT: Always run the command prompt or PowerShell in admin mode**
 
 1. [Install chocolatey](https://chocolatey.org/install) first. It is unobtrusive software and I guarantee you gonna thank me later, when you are updating your python distribution ;)
-2. Using [chocolatey page](https://chocolatey.org/packages/ruby), you can just paste code to your cmd to install ruby (`choco install ruby`). If everything goes well, you should have access to ruby in your cmd (you can test it by `ruby irb` which starts ruby console). If it doesn't work adn you didin't receive any errors during install, try refreshing your command prompt or restarting PC.
+2. Using [chocolatey page](https://chocolatey.org/packages/ruby), you can just paste code to your cmd to install ruby (`choco install ruby`). If everything goes well, you should have access to ruby in your cmd (you can test it by `ruby irb` which starts ruby console). If it doesn't work and you didin't receive any errors during install, try refreshing your command prompt or restarting PC.
 3. Install bundler by running `gem install bundler` in your command prompt.
 4. Install jekyll by running `gem install jekyll`.
 5. Create new website by running `jekyll new test-site`
@@ -42,6 +44,3 @@ A: If you are running on windows, it is possible that the first time you ran bun
 
 **Q: Could not find *gem-name* in any of the sources (Bundler::GemNotFound)**
 A: This can happen if the bundler got corrupted or wasn't working properly when you first ran `bundle install`. You can update bundler with `gem install bundler` and then run `bundle update` or `bundle install --force`.
-
-**Q: Jekyll is running but localhost:4000 shows ERR:no response**
-A: This can happen if you have another site or software running on the default port 4000. You can try running jekyll on a different port with `jekyll server --port <PORT_NUMBER>`.

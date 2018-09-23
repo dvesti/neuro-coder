@@ -1,0 +1,666 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to run jekyll on windows - Neuro Coder</title>
+<meta name="description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Neuro Coder">
+<meta property="og:title" content="How to run jekyll on windows">
+<meta property="og:url" content="http://neuro-coder.com/coding/jekyll/ruby/how-to-run-jekyll-on-windows/">
+
+
+  <meta property="og:description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-23T15:16:01+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://neuro-coder.com/coding/jekyll/ruby/how-to-run-jekyll-on-windows/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Neuro-Coder",
+      "url": "http://neuro-coder.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Neuro Coder Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Neuro Coder</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://neuro-coder.com/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/coding" itemprop="item"><span itemprop="name">Coding</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/jekyll" itemprop="item"><span itemprop="name">Jekyll</span></a>
+          <meta itemprop="position" content="3" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/ruby" itemprop="item"><span itemprop="name">Ruby</span></a>
+          <meta itemprop="position" content="4" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">How to run jekyll on windows</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Prague</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hejtmy@neuro-coder.com">
+            <meta itemprop="email" content="hejtmy@neuro-coder.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/hejtmy_" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://instagram.com/neurocoder" itemprop="sameAs">
+            <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/hejtmy" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs">
+            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://steamcommunity.com/id/hejtmy_" itemprop="sameAs">
+            <i class="fab fa-fw fa-steam" aria-hidden="true"></i> Steam
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to run jekyll on windows">
+    <meta itemprop="description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.">
+    <meta itemprop="datePublished" content="September 23, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">How to run jekyll on windows
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="https://jekyllrb.com/">Jekyll</a> is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.</p>
+
+<p>More technically, Jekyll is a ruby gem. It is fairly straightforward to run it on Unix systems, but it used to be pain to run it on Windows. People used somewhat complicated <a href="https://rubyinstaller.org/">multi installer setups</a> or were running it on the amazing <a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">Windows Linux Bash Shell</a> - which had it’s issues with continuous file tracking. But everything changed with the brilliant <a href="https://chocolatey.org/">Chocolatey</a>!</p>
+
+<p><a href="https://chocolatey.org/">Chocolatey</a> brings to CMD what programmers love about shell - it allows installing useful software and packages (like python, mysql etc.) with simple syntax. It basically does what you’d do yourself by downloading executables, dependencies and registering environment variables yourself and then streamlines updates to installed packages, pays attention to updated dependencies and all. It is simply a must have on Windows.</p>
+
+<h2 id="how-to-do-it">How to do it</h2>
+<p>To run jekyll, we first need Ruby and we need bundler. Ruby is a objective programming language and bundle is a Ruby Gem (think like a ruby package).</p>
+
+<p><strong>IMPORTANT: Always run the command prompt or PowerShell in admin mode</strong></p>
+
+<ol>
+  <li><a href="https://chocolatey.org/install">Install chocolatey</a> first. It is unobtrusive software and I guarantee you gonna thank me later, when you are updating your python distribution ;)</li>
+  <li>Using <a href="https://chocolatey.org/packages/ruby">chocolatey page</a>, you can just paste code to your cmd to install ruby (<code class="highlighter-rouge">choco install ruby</code>). If everything goes well, you should have access to ruby in your cmd (you can test it by <code class="highlighter-rouge">ruby irb</code> which starts ruby console). If it doesn’t work adn you didin’t receive any errors during install, try refreshing your command prompt or restarting PC.</li>
+  <li>Install bundler by running <code class="highlighter-rouge">gem install bundler</code> in your command prompt.</li>
+  <li>Install jekyll by running <code class="highlighter-rouge">gem install jekyll</code>.</li>
+  <li>Create new website by running <code class="highlighter-rouge">jekyll new test-site</code></li>
+  <li>Go to the website folder (<code class="highlighter-rouge">cd test-site</code>) and try to run it with <code class="highlighter-rouge">jekyll serve</code>.</li>
+  <li>Enjoy your windows Jekyll ;)</li>
+</ol>
+
+<p><em>NOTE: After you have succesfully installed ruby, you can just follow instructions <a href="https://jekyllrb.com/docs/">here</a></em></p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Q: This page isn’t working. 127.0.0.1 sent and invalid response. ERR_INVALID_HTTP_RESPONSE</strong>
+A: This is probably because you have another process running on Jekyll’s port that is not serving HTTP files. You can easily set the <code class="highlighter-rouge">jekyll serve --port 4001</code> and see if that works.</p>
+
+<p><strong>Q: You have already activated <em>gem-name version-number</em>, but your Gemfile requires <em>gem-name</em> - different <em>version-number</em></strong>
+A: This happens when you have installed some gems through <code class="highlighter-rouge">gem install</code> that is newer than jekyll gemfile requires with <code class="highlighter-rouge">~&gt;</code>. Sometimes jekyll will already tell you what to do. You need to run jekyll with gem specified by the Gemfile, so you run it as <code class="highlighter-rouge">bundle exec jekyll serve</code></p>
+
+<p><strong>Q: cannot load such file – bundler</strong>
+A: This might have to do with reinstalling or upgrading ruby, where you ‘forgot’ to install bundler after getting the ruby executable. Just run <code class="highlighter-rouge">gem install bundler</code></p>
+
+<p><strong>Q: Jekyll claims gems are missing</strong>
+A: If you are running on windows, it is possible that the first time you ran bundle install, some gems weren’t properly installed. Just follow the recommendation above on how to solve some windows issues. If that is still the case, you can run <code class="highlighter-rouge">bundle install --force</code> to force reinstall all gems. This usually solves the issue.</p>
+
+<p><strong>Q: Could not find <em>gem-name</em> in any of the sources (Bundler::GemNotFound)</strong>
+A: This can happen if the bundler got corrupted or wasn’t working properly when you first ran <code class="highlighter-rouge">bundle install</code>. You can update bundler with <code class="highlighter-rouge">gem install bundler</code> and then run <code class="highlighter-rouge">bundle update</code> or <code class="highlighter-rouge">bundle install --force</code>.</p>
+
+<p><strong>Q: Jekyll is running but localhost:4000 shows ERR:no response</strong>
+A: This can happen if you have another site or software running on the default port 4000. You can try running jekyll on a different port with <code class="highlighter-rouge">jekyll server --port &lt;PORT_NUMBER&gt;</code>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/chocolately" class="page__taxonomy-item" rel="tag">chocolately</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/coding" class="page__taxonomy-item" rel="tag">coding</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/personal" class="page__taxonomy-item" rel="tag">personal</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/programming" class="page__taxonomy-item" rel="tag">programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/ruby" class="page__taxonomy-item" rel="tag">ruby</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/windows" class="page__taxonomy-item" rel="tag">windows</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/coding" class="page__taxonomy-item" rel="tag">coding</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/ruby" class="page__taxonomy-item" rel="tag">ruby</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-23T15:16:01+00:00">September 23, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+run+jekyll+on+windows%20http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/gamedev/sending-information-unity-browser/" class="pagination--pager" title="How to send information from Unity to a web browser - part I.
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/gamedev/sending-information-unity-browser/" rel="permalink">How to send information from Unity to a web browser - part I.
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, w...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/phd/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/coding/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PROGRAMMING BASICS
+Once at a high school, I decided to demonstrate to students, why they should use R instead of Excel for their psychology statistics, and g...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/psychology/R-watson-personality/" rel="permalink">Reading personality traits from between the lines with IBM Watson
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In March I went to a talk by one of my colleagues at the Czech NIMH. He is a computer science major PhD student currently working for the IBM and focusing on...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

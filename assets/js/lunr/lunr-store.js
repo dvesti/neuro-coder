@@ -18,4 +18,9 @@ var store = [{
         "excerpt":"When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance...","categories": ["gamedev"],
         "tags": ["unity","node","science"],
         "url": "http://neuro-coder.com/gamedev/sending-information-unity-browser/",
+        "teaser":null},{
+        "title": "How to run jekyll on windows",
+        "excerpt":"Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there...","categories": ["coding","jekyll","ruby"],
+        "tags": ["jekyll","ruby","windows","chocolately","programming","coding","personal"],
+        "url": "http://neuro-coder.com/coding/jekyll/ruby/how-to-run-jekyll-on-windows/",
         "teaser":null}]

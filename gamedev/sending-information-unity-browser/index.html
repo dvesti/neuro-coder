@@ -1,9 +1,9 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
-  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="en" class="no-js">
   <head>
@@ -50,7 +50,7 @@
 
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Person",
       "name": "Neuro-Coder",
       "url": "http://neuro-coder.com",
@@ -69,9 +69,7 @@
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Neuro Coder Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -81,7 +79,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if lte IE 9]>
+<!--[if IE ]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -95,6 +93,7 @@
     }
   </style>
 <![endif]-->
+
 
 
     <!-- start custom head snippets -->
@@ -111,10 +110,13 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
 
-    <div class="masthead">
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
+        
         <a class="site-title" href="/">Neuro Coder</a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/about/" >About</a>
@@ -141,12 +143,12 @@
 
 
 <nav class="breadcrumbs">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     
     
     
       
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a href="http://neuro-coder.com/" itemprop="item"><span itemprop="name">Home</span></a>
           <meta itemprop="position" content="1" />
         </li>
@@ -154,7 +156,7 @@
       
       
         
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a href="/gamedev" itemprop="item"><span itemprop="name">Gamedev</span></a>
           <meta itemprop="position" content="2" />
         </li>
@@ -178,7 +180,7 @@
   
 
 
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person">
 
   
 
@@ -197,7 +199,7 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Prague</span>
         </li>
       
@@ -219,7 +221,7 @@
 
       
         <li>
-          <a href="https://twitter.com/hejtmy_" itemprop="sameAs">
+          <a href="https://twitter.com/hejtmy_" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
           </a>
         </li>
@@ -235,7 +237,7 @@
 
       
         <li>
-          <a href="https://instagram.com/neurocoder" itemprop="sameAs">
+          <a href="https://instagram.com/neurocoder" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
           </a>
         </li>
@@ -247,7 +249,7 @@
 
       
         <li>
-          <a href="https://github.com/hejtmy" itemprop="sameAs">
+          <a href="https://github.com/hejtmy" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
           </a>
         </li>
@@ -257,7 +259,7 @@
 
       
         <li>
-          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs">
+          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
           </a>
         </li>
@@ -273,7 +275,7 @@
 
       
         <li>
-          <a href="https://steamcommunity.com/id/hejtmy_" itemprop="sameAs">
+          <a href="https://steamcommunity.com/id/hejtmy_" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-steam" aria-hidden="true"></i> Steam
           </a>
         </li>
@@ -293,7 +295,7 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -509,7 +511,7 @@
 ">Previous</a>
     
     
-      <a href="/coding/jekyll/ruby/how-to-run-jekyll-on-windows/" class="pagination--pager" title="How to run jekyll on windows
+      <a href="/coding/visual-studio-code-anaconda/" class="pagination--pager" title="How to run anaconda environment in Visual Studio Code terminal
 ">Next</a>
     
   </nav>
@@ -524,6 +526,7 @@
       <section id="disqus_thread"></section>
     
 </div>
+
     
   </article>
 
@@ -538,7 +541,7 @@
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -558,13 +561,41 @@
     <p class="archive__item-excerpt" itemprop="description">Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then conver...</p>
   </article>
 </div>
+
         
           
 
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/coding/visual-studio-code-anaconda/" rel="permalink">How to run anaconda environment in Visual Studio Code terminal
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally p...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -586,13 +617,14 @@
 </p>
   </article>
 </div>
+
         
           
 
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -613,32 +645,7 @@
 Once at a high school, I decided to demonstrate to students, why they should use R instead of Excel for their psychology statistics, and g...</p>
   </article>
 </div>
-        
-          
 
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/psychology/R-watson-personality/" rel="permalink">Reading personality traits from between the lines with IBM Watson
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">In March I went to a talk by one of my colleagues at the Czech NIMH. He is a computer science major PhD student currently working for the IBM and focusing on...</p>
-  </article>
-</div>
         
       </div>
     </div>
@@ -666,14 +673,14 @@ Once at a high school, I decided to demonstrate to students, why they should use
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2019 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
 
 
 

@@ -1,0 +1,623 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to run anaconda environment in Visual Studio Code terminal - Neuro Coder</title>
+<meta name="description" content="I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Neuro Coder">
+<meta property="og:title" content="How to run anaconda environment in Visual Studio Code terminal">
+<meta property="og:url" content="http://neuro-coder.com/coding/visual-studio-code-anaconda/">
+
+
+  <meta property="og:description" content="I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-20T15:16:01+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://neuro-coder.com/coding/visual-studio-code-anaconda/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Neuro-Coder",
+      "url": "http://neuro-coder.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Neuro Coder Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Neuro Coder</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://neuro-coder.com/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/coding" itemprop="item"><span itemprop="name">Coding</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">How to run anaconda environment in Visual Studio Code terminal</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Prague</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hejtmy@gmail.com">
+            <meta itemprop="email" content="hejtmy@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/hejtmy_" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://instagram.com/neurocoder" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/hejtmy" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://steamcommunity.com/id/hejtmy_" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-steam" aria-hidden="true"></i> Steam
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to run anaconda environment in Visual Studio Code terminal">
+    <meta itemprop="description" content="I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal.">
+    <meta itemprop="datePublished" content="September 20, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">How to run anaconda environment in Visual Studio Code terminal
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>I love <a href="https://code.visualstudio.com/">Visual Studio Code</a>. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal.</p>
+
+<p>If you have Linux or a Mac, you are solid. If you run Windows, you might be slightly underwhelmed by the command prompt capabilities, until you install <a href="https://chocolatey.org/">Chocolatey</a>. I already sang praise about Chocolatey <a href="/coding/jekyll/ruby/how-to-run-jekyll-on-windows/">here</a>, and it is a must for a Windows based programmer in my opinion. So now you have VSC running and you can prototype your code nad run it from the same window, amazing. BUT …</p>
+
+<p>The main issue I came across was to run python code in <a href="https://anaconda.org">Anaconda</a>. I use Anaconda as it was recommended, therefore installing packages in separate environments for different purposes (see list of some of my envs <a href="https://github.com/hejtmy/python-envs">here</a>). I install almost nothing in the <em>root</em> environment, which is the default one that command prompt starts with when you open it. Another issue is that for some reason, I couldn’t change the VSC anaconda environment using the anaconda’s <code class="highlighter-rouge">activate *env*</code> command and it was still defaulting to the <em>root</em>. So when I am building markdown documentation with <a href="https://www.mkdocs.org/">mkdocs</a> and I need to load my <em>base</em> environment, I couldn’t run it in the VSC prompt. Luckily, there was a simple solution.</p>
+
+<p>Another great feature of the VSC is customizability in its settings file. The entire settings is in <em>.json</em>, which is genius, because you can easily share and copy settings between users or projects no hassle. No longer we are bound by describing to what menu you have to go to click on which button (love you <code class="highlighter-rouge">JetBrains</code> and I know you have your <em>.ini</em> files, but changing settings is often a chore). In VSC, you just create a <em>.vscode</em> folder with <em>settings.json</em> inside and you change what you wanna change. Difficult for a lay person, amazing for those who know what they are doing :)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project-folder
+|-.vscode
+|---settings.json
+</code></pre></div></div>
+
+<p>So if you want to run your python commands in the VSC terminal using a particular environment, you can just point it to that env with adding this line to the <em>settings.json</em> file.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"python.pythonPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path-to-your-environment/python.exe"</span><span class="w"> 
+</span></code></pre></div></div>
+
+<p>If you are unsure what the path is, you can always call <code class="highlighter-rouge">conda info --envs</code> and get it. This is output of mine,</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ai                       C:<span class="se">\P</span>rogramData<span class="se">\A</span>naconda3<span class="se">\e</span>nvs<span class="se">\a</span>i
+base                     C:<span class="se">\P</span>rogramData<span class="se">\A</span>naconda3<span class="se">\e</span>nvs<span class="se">\b</span>ase
+root                  <span class="k">*</span>  C:<span class="se">\P</span>rogramData<span class="se">\A</span>naconda3
+</code></pre></div></div>
+
+<p>So in the end, if I want to run my project in the <em>ai</em> environment, I’d just change my settings.json to:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//settings.json</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">platform</span><span class="w"> </span><span class="err">agnostic</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">folder</span><span class="w"> </span><span class="err">separators</span><span class="p">,</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">can</span><span class="w"> </span><span class="err">use</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="err">even</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">windows</span><span class="w">
+</span><span class="p">{</span><span class="w">
+	</span><span class="s2">"python.pythonPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:/ProgramData/Anaconda3/envs/ai/python.exe"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/anaconda" class="page__taxonomy-item" rel="tag">anaconda</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/coding-tips" class="page__taxonomy-item" rel="tag">coding-tips</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/python" class="page__taxonomy-item" rel="tag">python</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/visual-studio-code" class="page__taxonomy-item" rel="tag">visual-studio-code</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/coding" class="page__taxonomy-item" rel="tag">coding</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-20T15:16:01+00:00">September 20, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+run+anaconda+environment+in+Visual+Studio+Code+terminal%20http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fvisual-studio-code-anaconda%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fvisual-studio-code-anaconda%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fvisual-studio-code-anaconda%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fvisual-studio-code-anaconda%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/gamedev/sending-information-unity-browser/" class="pagination--pager" title="How to send information from Unity to a web browser - part I.
+">Previous</a>
+    
+    
+      <a href="/coding/jekyll/ruby/how-to-run-jekyll-on-windows/" class="pagination--pager" title="How to run jekyll on windows
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/coding/jekyll/ruby/how-to-run-jekyll-on-windows/" rel="permalink">How to run jekyll on windows
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then conver...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/gamedev/sending-information-unity-browser/" rel="permalink">How to send information from Unity to a web browser - part I.
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, w...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/phd/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/coding/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PROGRAMMING BASICS
+Once at a high school, I decided to demonstrate to students, why they should use R instead of Excel for their psychology statistics, and g...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

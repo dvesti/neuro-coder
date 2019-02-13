@@ -10,7 +10,7 @@ var store = [{
         "url": "http://neuro-coder.com/coding/intro-to-programming/",
         "teaser":null},{
         "title": "Python explains what it is like to be a graduate student in neuroscience",
-        "excerpt":"This is how neuroscience feels in python. from enum import Enum#got his function from supervisor, no idea what it doesfrom god import random_magicclass DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data) def provide_results(data): if(data.type ==...","categories": ["PhD"],
+        "excerpt":"This is how neuroscience feels in python. from enum import Enum #got his function from supervisor, no idea what it does from god import random_magic class DataType(Enum): CRAP = 1 WHAT = 2 EFFORT = 3 class DataClass: def _init_(self, path): self.data = import_data(path) self.assign_type() def assign_type(self): self.type = random_magic(self.data)...","categories": ["PhD"],
         "tags": ["phd","neuroscience","python","fun"],
         "url": "http://neuro-coder.com/phd/neuroscience-phd-python/",
         "teaser":null},{
@@ -18,6 +18,11 @@ var store = [{
         "excerpt":"When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance...","categories": ["gamedev"],
         "tags": ["unity","node","science"],
         "url": "http://neuro-coder.com/gamedev/sending-information-unity-browser/",
+        "teaser":null},{
+        "title": "How to run anaconda environment in Visual Studio Code terminal",
+        "excerpt":"I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it...","categories": ["coding"],
+        "tags": ["python","anaconda","visual-studio-code","coding-tips"],
+        "url": "http://neuro-coder.com/coding/visual-studio-code-anaconda/",
         "teaser":null},{
         "title": "How to run jekyll on windows",
         "excerpt":"Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there...","categories": ["coding","jekyll","ruby"],

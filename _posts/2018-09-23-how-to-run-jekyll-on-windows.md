@@ -34,13 +34,25 @@ To run jekyll, we first need Ruby and we need bundler. Ruby is a objective progr
 A: This is probably because you have another process running on Jekyll's port that is not serving HTTP files. You can easily set the `jekyll serve --port 4001` and see if that works.
 
 **Q: You have already activated *gem-name version-number*, but your Gemfile requires *gem-name* - different *version-number***
+
 A: This happens when you have installed some gems through `gem install` that is newer than jekyll gemfile requires with `~>`. Sometimes jekyll will already tell you what to do. You need to run jekyll with gem specified by the Gemfile, so you run it as `bundle exec jekyll serve`
 
 **Q: cannot load such file -- bundler**
+
 A: This might have to do with reinstalling or upgrading ruby, where you 'forgot' to install bundler after getting the ruby executable. Just run `gem install bundler`
 
 **Q: Jekyll claims gems are missing**
+
 A: If you are running on windows, it is possible that the first time you ran bundle install, some gems weren't properly installed. Just follow the recommendation above on how to solve some windows issues. If that is still the case, you can run `bundle install --force` to force reinstall all gems. This usually solves the issue.
 
 **Q: Could not find *gem-name* in any of the sources (Bundler::GemNotFound)**
+
 A: This can happen if the bundler got corrupted or wasn't working properly when you first ran `bundle install`. You can update bundler with `gem install bundler` and then run `bundle update` or `bundle install --force`.
+
+**Q: Error when runnign bundle install. Cannot build native dependencies**
+
+A: If you are installing ruby from the choco, it might be necessary to also install tools to build dependencies which do not ship with windows executables. You can do this with `ridk install 3`, as described on the choco ruby package [page](https://chocolatey.org/packages/ruby)
+
+**Q: Issues with dependencies when running bundle install**
+
+A: Sometimes it happens that you will not be able to install things with bundle install due to some package depending on a package which is not freely available. If that is the case, you can install all necessary package with `gem install package --ignore-dependencies` and then hope all will work when you run `bundle exec jekyll serve`. I had this issue with **nokogiri** package which only worked with ruby 2.7 in a dev version which was not available for other packages as a dependency.

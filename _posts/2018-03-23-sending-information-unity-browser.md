@@ -2,8 +2,8 @@
 layout: single
 title: "How to send information from Unity to a web browser - part I."
 date: 2018-03-22 16:16:01 +0100
-tags: unity node science
-categories: gamedev
+tags: unity node javascript
+categories: Gamedev
 comments: true
 ---
 

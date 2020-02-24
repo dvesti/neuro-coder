@@ -2,8 +2,8 @@
 layout: single
 title:  "How to run jekyll on windows"
 date:   2018-09-23 16:16:01 +0100
-categories: coding jekyll ruby
-tags: jekyll ruby windows chocolately programming coding personal
+categories: programming
+tags: jekyll ruby windows chocolately tips
 ---
 
 [Jekyll](https://jekyllrb.com/) is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.

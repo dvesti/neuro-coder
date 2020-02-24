@@ -2,8 +2,8 @@
 layout: single
 title:  "What I would like to have known when I started coding"
 date:   2017-06-02 16:16:01 +0100
-categories: Coding
-tags: teaching R programming coding personal
+categories: personal
+tags: teaching personal programming coding
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: single
 title:  "Python explains what it is like to be a graduate student in neuroscience"
 date:   2018-03-01 16:16:01 +0100
-categories: PhD
+categories: personal
 comments: true
 tags: phd neuroscience python fun 
 ---

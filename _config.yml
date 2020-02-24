@@ -13,6 +13,7 @@ source:               .
 destination:          _site
 
 theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "air"
 # Site Settings
 locale                   : "en"
 title                    : "Neuro Coder"
@@ -87,7 +88,7 @@ analytics:
 author:
   name             : "Lukáš Hejtmánek"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side."
+  bio              : "Neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also a vdeiogame, board gamer and a technology lover."
   location         : "Prague"
   email            : "hejtmy@gmail.com"
   uri              :
@@ -215,7 +216,7 @@ whitelist:
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: jekyll-archives
-  path: /
+  path: /category/
 tag_archive:
   type: jekyll-archives
   path: /tags/
@@ -225,11 +226,9 @@ jekyll-archives:
    enabled:
      - categories
      - tags
-   layouts:
-     category: archive-taxonomy
-     tag: archive-taxonomy
+   layout: archive-taxonomy
    permalinks:
-     category: /:name/
+     category: /category/:name/
      tag: /tags/:name/
 
 # HTML Compression

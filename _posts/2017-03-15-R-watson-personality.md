@@ -2,7 +2,7 @@
 layout: single
 title:  "Reading personality traits from between the lines with IBM Watson"
 date:   2017-3-10 16:16:01 +0100
-categories: Psychology
+categories: data-science
 tags: R machine-learning bluemix IBM
 comments: true
 ---

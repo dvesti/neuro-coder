@@ -2,8 +2,8 @@
 layout: single
 title:  "How to run anaconda environment in Visual Studio Code terminal"
 date:   2018-09-20 16:16:01 +0100
-categories: coding
-tags: python anaconda visual-studio-code coding-tips
+categories: programming
+tags: python anaconda visual-studio-code tips
 ---
 
 I love [Visual Studio Code](https://code.visualstudio.com/). I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal. 

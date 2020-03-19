@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -10,8 +10,10 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>How to send information from Unity to a web browser - part I. - Neuro Coder</title>
-<meta name="description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)">
+<meta name="description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;) ">
 
+
+  <meta name="author" content="Lukáš Hejtmánek">
 
 
 <meta property="og:type" content="article">
@@ -21,7 +23,7 @@
 <meta property="og:url" content="http://neuro-coder.com/gamedev/sending-information-unity-browser/">
 
 
-  <meta property="og:description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)">
+  <meta property="og:description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;) ">
 
 
 
@@ -45,19 +47,16 @@
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "Neuro-Coder",
-      "url": "http://neuro-coder.com",
-      "sameAs": null
-    }
-  </script>
-
+      "url": "http://neuro-coder.com/"
+    
+  }
+</script>
 
 
 
@@ -79,7 +78,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -105,6 +104,14 @@
   </head>
 
   <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -117,9 +124,14 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/">Neuro Coder</a>
+        <a class="site-title" href="/">
+          Neuro Coder
+          
+        </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/about/" >About</a>
+              <a href="/categories/programming">Programming</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -157,7 +169,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/gamedev" itemprop="item"><span itemprop="name">Gamedev</span></a>
+          <a href="/category/gamedev" itemprop="item"><span itemprop="name">Gamedev</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -189,9 +201,10 @@
       <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
     
     
-      <p class="author__bio" itemprop="description">
-        I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side.
-      </p>
+      <div class="author__bio" itemprop="description">
+        <p>Neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also a vdeiogame, board gamer and a technology lover.</p>
+
+      </div>
     
   </div>
 
@@ -234,8 +247,6 @@
       
 
       
-
-      
         <li>
           <a href="https://instagram.com/neurocoder" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
@@ -259,7 +270,7 @@
 
       
         <li>
-          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
           </a>
         </li>
@@ -308,6 +319,7 @@
   </div>
 
 
+
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="How to send information from Unity to a web browser - part I.">
     <meta itemprop="description" content="When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, which makes them uneasy, or you can ask them, which ruins your experiment. I often wished, if only there was a way to monitor participants performance on a different screen ;)">
@@ -326,6 +338,7 @@
 
 
   3 minute read
+
 </p>
           
         </header>
@@ -350,7 +363,7 @@
 <p>First we need to start routing all that unity traffic. I am building all in index so far. App.js so far untouched. So let’s listen to post requests:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//index.js</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">({});</span>
 <span class="p">});</span>
@@ -398,27 +411,27 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//app.js</span>
 <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
-<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">).</span><span class="nx">Server</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
-<span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'socket.io'</span><span class="p">)(</span><span class="nx">server</span><span class="p">);</span> <span class="c1">//no var initialisation makes sure io is available in controllers as well</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">).</span><span class="nx">Server</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+<span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">socket.io</span><span class="dl">'</span><span class="p">)(</span><span class="nx">server</span><span class="p">);</span> <span class="c1">//no var initialisation makes sure io is available in controllers as well</span>
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">);</span>
 
 <span class="c1">//index.js</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-  <span class="nx">io</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'unityEvent'</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+  <span class="nx">io</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">unityEvent</span><span class="dl">'</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">({});</span>
 <span class="p">});</span>
 <span class="c1">//incomming.js</span>
 <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">();</span>
-<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'unityEvent'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'event received'</span><span class="p">);</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">unityEvent</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">event received</span><span class="dl">'</span><span class="p">);</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'position'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">position</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">;</span>
 <span class="p">});</span>
 
 <span class="c1">//index.pug</span>
-<span class="nx">script</span><span class="p">(</span><span class="nx">src</span><span class="o">=</span><span class="s2">"/socket.io/socket.io.js"</span><span class="p">)</span>
-<span class="nx">script</span><span class="p">(</span><span class="nx">src</span><span class="o">=</span><span class="s1">'javascripts/incomming.js'</span><span class="p">)</span>
+<span class="nx">script</span><span class="p">(</span><span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">/socket.io/socket.io.js</span><span class="dl">"</span><span class="p">)</span>
+<span class="nx">script</span><span class="p">(</span><span class="nx">src</span><span class="o">=</span><span class="dl">'</span><span class="s1">javascripts/incomming.js</span><span class="dl">'</span><span class="p">)</span>
 <span class="nx">block</span> <span class="nx">content</span>
   <span class="nx">h1</span><span class="o">=</span> <span class="nx">title</span>
   <span class="nx">p</span> <span class="nx">Welcome</span> <span class="nx">to</span> <span class="err">#</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span>
@@ -449,11 +462,11 @@
     
       
       
-      <a href="/tags/node" class="page__taxonomy-item" rel="tag">node</a><span class="sep">, </span>
+      <a href="/tags/javascript" class="page__taxonomy-item" rel="tag">javascript</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/science" class="page__taxonomy-item" rel="tag">science</a><span class="sep">, </span>
+      <a href="/tags/node" class="page__taxonomy-item" rel="tag">node</a><span class="sep">, </span>
     
       
       
@@ -478,7 +491,7 @@
     
       
       
-      <a href="/gamedev" class="page__taxonomy-item" rel="tag">gamedev</a>
+      <a href="/category/gamedev" class="page__taxonomy-item" rel="tag">Gamedev</a>
     
     </span>
   </p>
@@ -498,8 +511,6 @@
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
-
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fgamedev%2Fsending-information-unity-browser%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
@@ -507,11 +518,11 @@
       
   <nav class="pagination">
     
-      <a href="/phd/neuroscience-phd-python/" class="pagination--pager" title="Python explains what it is like to be a graduate student in neuroscience
+      <a href="/personal/neuroscience-phd-python/" class="pagination--pager" title="Python explains what it is like to be a graduate student in neuroscience
 ">Previous</a>
     
     
-      <a href="/coding/visual-studio-code-anaconda/" class="pagination--pager" title="How to run anaconda environment in Visual Studio Code terminal
+      <a href="/programming/visual-studio-code-anaconda/" class="pagination--pager" title="How to run anaconda environment in Visual Studio Code terminal
 ">Next</a>
     
   </nav>
@@ -545,7 +556,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/coding/jekyll/ruby/how-to-run-jekyll-on-windows/" rel="permalink">How to run jekyll on windows
+        <a href="/programming/how-to-run-jekyll-on-windows/" rel="permalink">How to run jekyll on windows
 </a>
       
     </h2>
@@ -555,7 +566,8 @@
 
 
 
-  3 minute read
+  4 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then conver...</p>
@@ -572,7 +584,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/coding/visual-studio-code-anaconda/" rel="permalink">How to run anaconda environment in Visual Studio Code terminal
+        <a href="/programming/visual-studio-code-anaconda/" rel="permalink">How to run anaconda environment in Visual Studio Code terminal
 </a>
       
     </h2>
@@ -583,6 +595,7 @@
 
 
   2 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally p...</p>
@@ -599,7 +612,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/phd/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
+        <a href="/personal/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
 </a>
       
     </h2>
@@ -610,10 +623,10 @@
 
 
   1 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
-
 </p>
   </article>
 </div>
@@ -628,7 +641,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/coding/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
+        <a href="/personal/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
 </a>
       
     </h2>
@@ -639,6 +652,7 @@
 
 
   9 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">PROGRAMMING BASICS
@@ -656,7 +670,7 @@ Once at a high school, I decided to demonstrate to students, why they should use
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -673,15 +687,28 @@ Once at a high school, I decided to demonstrate to students, why they should use
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2020 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
+
+
+
+
+
+
+  <script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-91041891-1','auto');
+  ga('set', 'anonymizeIp', false);
+  ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
 
 
 
@@ -691,10 +718,10 @@ Once at a high school, I decided to demonstrate to students, why they should use
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://neuro-coder.com/gamedev/sending-information-unity-browser/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/gamedev/sending-information-unity-browser"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://neuro-coder.com/gamedev/sending-information-unity-browser/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/gamedev/sending-information-unity-browser"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
       s.src = 'https://neuro-coder.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
@@ -705,6 +732,8 @@ Once at a high school, I decided to demonstrate to students, why they should use
 
 
   
+
+
 
 
 

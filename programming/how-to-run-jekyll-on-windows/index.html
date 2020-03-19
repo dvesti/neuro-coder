@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -10,18 +10,20 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>How to run jekyll on windows - Neuro Coder</title>
-<meta name="description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.">
+<meta name="description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows. ">
 
+
+  <meta name="author" content="Lukáš Hejtmánek">
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Neuro Coder">
 <meta property="og:title" content="How to run jekyll on windows">
-<meta property="og:url" content="http://neuro-coder.com/coding/jekyll/ruby/how-to-run-jekyll-on-windows/">
+<meta property="og:url" content="http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/">
 
 
-  <meta property="og:description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.">
+  <meta property="og:description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows. ">
 
 
 
@@ -40,24 +42,21 @@
   
 
 
-<link rel="canonical" href="http://neuro-coder.com/coding/jekyll/ruby/how-to-run-jekyll-on-windows/">
+<link rel="canonical" href="http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/">
 
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "Neuro-Coder",
-      "url": "http://neuro-coder.com",
-      "sameAs": null
-    }
-  </script>
-
+      "url": "http://neuro-coder.com/"
+    
+  }
+</script>
 
 
 
@@ -79,7 +78,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -105,6 +104,14 @@
   </head>
 
   <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -117,9 +124,14 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/">Neuro Coder</a>
+        <a class="site-title" href="/">
+          Neuro Coder
+          
+        </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/about/" >About</a>
+              <a href="/categories/programming">Programming</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -157,28 +169,8 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/coding" itemprop="item"><span itemprop="name">Coding</span></a>
+          <a href="/category/programming" itemprop="item"><span itemprop="name">Programming</span></a>
           <meta itemprop="position" content="2" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/jekyll" itemprop="item"><span itemprop="name">Jekyll</span></a>
-          <meta itemprop="position" content="3" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/ruby" itemprop="item"><span itemprop="name">Ruby</span></a>
-          <meta itemprop="position" content="4" />
         </li>
         <span class="sep">/</span>
       
@@ -209,9 +201,10 @@
       <h3 class="author__name" itemprop="name">Lukáš Hejtmánek</h3>
     
     
-      <p class="author__bio" itemprop="description">
-        I am a neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also high school teacher, gamer and technology lover on the side.
-      </p>
+      <div class="author__bio" itemprop="description">
+        <p>Neuroscience Phd candidate in ASCR and NIMH, Czech Republic. Also a vdeiogame, board gamer and a technology lover.</p>
+
+      </div>
     
   </div>
 
@@ -254,8 +247,6 @@
       
 
       
-
-      
         <li>
           <a href="https://instagram.com/neurocoder" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram
@@ -279,7 +270,7 @@
 
       
         <li>
-          <a href="https://www.stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://stackoverflow.com/users/6058105/lukáš-hejtmánek" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
           </a>
         </li>
@@ -328,6 +319,7 @@
   </div>
 
 
+
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="How to run jekyll on windows">
     <meta itemprop="description" content="Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.">
@@ -345,7 +337,8 @@
 
 
 
-  3 minute read
+  4 minute read
+
 </p>
           
         </header>
@@ -382,17 +375,29 @@
 <p><strong>Q: This page isn’t working. 127.0.0.1 sent and invalid response. ERR_INVALID_HTTP_RESPONSE</strong>
 A: This is probably because you have another process running on Jekyll’s port that is not serving HTTP files. You can easily set the <code class="highlighter-rouge">jekyll serve --port 4001</code> and see if that works.</p>
 
-<p><strong>Q: You have already activated <em>gem-name version-number</em>, but your Gemfile requires <em>gem-name</em> - different <em>version-number</em></strong>
-A: This happens when you have installed some gems through <code class="highlighter-rouge">gem install</code> that is newer than jekyll gemfile requires with <code class="highlighter-rouge">~&gt;</code>. Sometimes jekyll will already tell you what to do. You need to run jekyll with gem specified by the Gemfile, so you run it as <code class="highlighter-rouge">bundle exec jekyll serve</code></p>
+<p><strong>Q: You have already activated <em>gem-name version-number</em>, but your Gemfile requires <em>gem-name</em> - different <em>version-number</em></strong></p>
 
-<p><strong>Q: cannot load such file – bundler</strong>
-A: This might have to do with reinstalling or upgrading ruby, where you ‘forgot’ to install bundler after getting the ruby executable. Just run <code class="highlighter-rouge">gem install bundler</code></p>
+<p>A: This happens when you have installed some gems through <code class="highlighter-rouge">gem install</code> that is newer than jekyll gemfile requires with <code class="highlighter-rouge">~&gt;</code>. Sometimes jekyll will already tell you what to do. You need to run jekyll with gem specified by the Gemfile, so you run it as <code class="highlighter-rouge">bundle exec jekyll serve</code></p>
 
-<p><strong>Q: Jekyll claims gems are missing</strong>
-A: If you are running on windows, it is possible that the first time you ran bundle install, some gems weren’t properly installed. Just follow the recommendation above on how to solve some windows issues. If that is still the case, you can run <code class="highlighter-rouge">bundle install --force</code> to force reinstall all gems. This usually solves the issue.</p>
+<p><strong>Q: cannot load such file – bundler</strong></p>
 
-<p><strong>Q: Could not find <em>gem-name</em> in any of the sources (Bundler::GemNotFound)</strong>
-A: This can happen if the bundler got corrupted or wasn’t working properly when you first ran <code class="highlighter-rouge">bundle install</code>. You can update bundler with <code class="highlighter-rouge">gem install bundler</code> and then run <code class="highlighter-rouge">bundle update</code> or <code class="highlighter-rouge">bundle install --force</code>.</p>
+<p>A: This might have to do with reinstalling or upgrading ruby, where you ‘forgot’ to install bundler after getting the ruby executable. Just run <code class="highlighter-rouge">gem install bundler</code></p>
+
+<p><strong>Q: Jekyll claims gems are missing</strong></p>
+
+<p>A: If you are running on windows, it is possible that the first time you ran bundle install, some gems weren’t properly installed. Just follow the recommendation above on how to solve some windows issues. If that is still the case, you can run <code class="highlighter-rouge">bundle install --force</code> to force reinstall all gems. This usually solves the issue.</p>
+
+<p><strong>Q: Could not find <em>gem-name</em> in any of the sources (Bundler::GemNotFound)</strong></p>
+
+<p>A: This can happen if the bundler got corrupted or wasn’t working properly when you first ran <code class="highlighter-rouge">bundle install</code>. You can update bundler with <code class="highlighter-rouge">gem install bundler</code> and then run <code class="highlighter-rouge">bundle update</code> or <code class="highlighter-rouge">bundle install --force</code>.</p>
+
+<p><strong>Q: Error when runnign bundle install. Cannot build native dependencies</strong></p>
+
+<p>A: If you are installing ruby from the choco, it might be necessary to also install tools to build dependencies which do not ship with windows executables. You can do this with <code class="highlighter-rouge">ridk install 3</code>, as described on the choco ruby package <a href="https://chocolatey.org/packages/ruby">page</a></p>
+
+<p><strong>Q: Issues with dependencies when running bundle install</strong></p>
+
+<p>A: Sometimes it happens that you will not be able to install things with bundle install due to some package depending on a package which is not freely available. If that is the case, you can install all necessary package with <code class="highlighter-rouge">gem install package --ignore-dependencies</code> and then hope all will work when you run <code class="highlighter-rouge">bundle exec jekyll serve</code>. I had this issue with <strong>nokogiri</strong> package which only worked with ruby 2.7 in a dev version which was not available for other packages as a dependency.</p>
 
         
       </section>
@@ -417,23 +422,15 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
     
       
       
-      <a href="/tags/coding" class="page__taxonomy-item" rel="tag">coding</a><span class="sep">, </span>
-    
-      
-      
       <a href="/tags/jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/personal" class="page__taxonomy-item" rel="tag">personal</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/programming" class="page__taxonomy-item" rel="tag">programming</a><span class="sep">, </span>
-    
-      
-      
       <a href="/tags/ruby" class="page__taxonomy-item" rel="tag">ruby</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/tips" class="page__taxonomy-item" rel="tag">tips</a><span class="sep">, </span>
     
       
       
@@ -458,15 +455,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
     
       
       
-      <a href="/coding" class="page__taxonomy-item" rel="tag">coding</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/ruby" class="page__taxonomy-item" rel="tag">ruby</a>
+      <a href="/category/programming" class="page__taxonomy-item" rel="tag">programming</a>
     
     </span>
   </p>
@@ -482,20 +471,18 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=How+to+run+jekyll+on+windows%20http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=How+to+run+jekyll+on+windows%20http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fcoding%2Fjekyll%2Fruby%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fhow-to-run-jekyll-on-windows%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/coding/visual-studio-code-anaconda/" class="pagination--pager" title="How to run anaconda environment in Visual Studio Code terminal
+      <a href="/programming/visual-studio-code-anaconda/" class="pagination--pager" title="How to run anaconda environment in Visual Studio Code terminal
 ">Previous</a>
     
     
@@ -523,7 +510,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/coding/visual-studio-code-anaconda/" rel="permalink">How to run anaconda environment in Visual Studio Code terminal
+        <a href="/programming/visual-studio-code-anaconda/" rel="permalink">How to run anaconda environment in Visual Studio Code terminal
 </a>
       
     </h2>
@@ -534,6 +521,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
 
 
   2 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally p...</p>
@@ -561,6 +549,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
 
 
   3 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">When you’are administering expeirments, it is often challenging to keep track of what the participants are doing. You can peak from behind their shoulders, w...</p>
@@ -577,7 +566,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/phd/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
+        <a href="/personal/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
 </a>
       
     </h2>
@@ -588,10 +577,10 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
 
 
   1 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
-
 </p>
   </article>
 </div>
@@ -606,7 +595,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/coding/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
+        <a href="/personal/intro-to-programming/" rel="permalink">What I would like to have known when I started coding
 </a>
       
     </h2>
@@ -617,6 +606,7 @@ A: This can happen if the bundler got corrupted or wasn’t working properly whe
 
 
   9 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">PROGRAMMING BASICS
@@ -634,7 +624,7 @@ Once at a high school, I decided to demonstrate to students, why they should use
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -651,14 +641,29 @@ Once at a high school, I decided to demonstrate to students, why they should use
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2020 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-91041891-1','auto');
+  ga('set', 'anonymizeIp', false);
+  ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
 
 
 

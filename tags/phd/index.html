@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -10,8 +10,10 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>phd - Neuro Coder</title>
-<meta name="description" content="A site about coding, neuroscience and occasional posts about games and IoT.">
+<meta name="description" content="A site about coding, neuroscience and occasional posts about games and IoT. ">
 
+
+  <meta name="author" content="Lukáš Hejtmánek">
 
 
 <meta property="og:type" content="website">
@@ -20,6 +22,8 @@
 <meta property="og:title" content="phd">
 <meta property="og:url" content="http://neuro-coder.com/tags/phd/">
 
+
+  <meta property="og:description" content="A site about coding, neuroscience and occasional posts about games and IoT. ">
 
 
 
@@ -41,19 +45,16 @@
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "Neuro-Coder",
-      "url": "http://neuro-coder.com",
-      "sameAs": null
-    }
-  </script>
-
+      "url": "http://neuro-coder.com/"
+    
+  }
+</script>
 
 
 
@@ -75,7 +76,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -101,6 +102,14 @@
   </head>
 
   <body class="layout--archive-taxonomy">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -113,9 +122,14 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/">Neuro Coder</a>
+        <a class="site-title" href="/">
+          Neuro Coder
+          
+        </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/about/" >About</a>
+              <a href="/categories/programming">Programming</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -130,11 +144,54 @@
 
 
     <div class="initial-content">
-      <div id="main" role="main">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://neuro-coder.com/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/tags" itemprop="item"><span itemprop="name">Tags</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">phd</li>
+      
+    
+  </ol>
+</nav>
+
   
 
+
+<div id="main" role="main">
+  
+
+
   <div class="archive">
-    <h1 class="page__title">phd</h1>
+    
+      <h1 id="page-title" class="page__title">phd</h1>
+    
     
       
 
@@ -145,7 +202,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/phd/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
+        <a href="/personal/neuroscience-phd-python/" rel="permalink">Python explains what it is like to be a graduate student in neuroscience
 </a>
       
     </h2>
@@ -156,10 +213,10 @@
 
 
   1 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">This is how neuroscience feels in python.
-
 </p>
   </article>
 </div>
@@ -167,11 +224,12 @@
     
   </div>
 </div>
+
     </div>
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -188,14 +246,29 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2020 Neuro-Coder. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-91041891-1','auto');
+  ga('set', 'anonymizeIp', false);
+  ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
 
 
 

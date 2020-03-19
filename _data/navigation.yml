@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Programming"
-    url: /categories/programming
+    url: /category/programming
   - title: "About"
     url: /about/
   # - title: "Sample Posts"

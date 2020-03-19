@@ -30,3 +30,5 @@ And the last trip was that I needed to to create the gh-pages, if they do not ex
 1. Log in to your travis account.
 2. Turn on automatic build for your repo (make sure it is a public repo or you have paid travis)
 3.
+
+https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075

@@ -25,6 +25,10 @@
 <lastmod>2018-09-23T15:16:01+00:00</lastmod>
 </url>
 <url>
+<loc>http://neuro-coder.com/programming/jekyll-travis-github/</loc>
+<lastmod>2020-03-20T15:16:16+00:00</lastmod>
+</url>
+<url>
 <loc>http://neuro-coder.com/about/</loc>
 </url>
 <url>
@@ -101,6 +105,12 @@
 </url>
 <url>
 <loc>http://neuro-coder.com/tags/chocolately/</loc>
+</url>
+<url>
+<loc>http://neuro-coder.com/tags/travis/</loc>
+</url>
+<url>
+<loc>http://neuro-coder.com/tags/ci/</loc>
 </url>
 <url>
 <loc>http://neuro-coder.com/category/data-science/</loc>

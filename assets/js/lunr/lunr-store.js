@@ -34,4 +34,10 @@ var store = [{
         "tags": ["jekyll","ruby","windows","chocolately","tips"],
         "url": "http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/",
         "teaser": null
+      },{
+        "title": "Automatic deployment of Jekyll site to Github pages through Travis CI",
+        "excerpt":"When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went...","categories": ["programming"],
+        "tags": ["travis","CI","jekyll"],
+        "url": "http://neuro-coder.com/programming/jekyll-travis-github/",
+        "teaser": null
       }]

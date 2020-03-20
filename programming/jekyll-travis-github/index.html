@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>How to run anaconda environment in Visual Studio Code terminal - Neuro Coder</title>
-<meta name="description" content="I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal. ">
+<!-- begin _includes/seo.html --><title>Automatic deployment of Jekyll site to Github pages through Travis CI - Neuro Coder</title>
+<meta name="description" content="When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went with Jekyll again. The main reasons being I would like to learn Go, but not Hugo templating. Also I hate deployment and would like to use Github built pages. They are ideal for small websites with low enough traffic. But as per usual, whenever I make any decision, it kicks me in the back. ">
 
 
   <meta name="author" content="Lukáš Hejtmánek">
@@ -19,30 +19,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Neuro Coder">
-<meta property="og:title" content="How to run anaconda environment in Visual Studio Code terminal">
-<meta property="og:url" content="http://neuro-coder.com/programming/visual-studio-code-anaconda/">
+<meta property="og:title" content="Automatic deployment of Jekyll site to Github pages through Travis CI">
+<meta property="og:url" content="http://neuro-coder.com/programming/jekyll-travis-github/">
 
 
-  <meta property="og:description" content="I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal. ">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-09-20T15:16:01+00:00">
+  <meta property="og:description" content="When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went with Jekyll again. The main reasons being I would like to learn Go, but not Hugo templating. Also I hate deployment and would like to use Github built pages. They are ideal for small websites with low enough traffic. But as per usual, whenever I make any decision, it kicks me in the back. ">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2020-03-20T15:16:16+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://neuro-coder.com/programming/visual-studio-code-anaconda/">
+
+<link rel="canonical" href="http://neuro-coder.com/programming/jekyll-travis-github/">
 
 
 
@@ -177,7 +177,7 @@
     
       
       
-        <li class="current">How to run anaconda environment in Visual Studio Code terminal</li>
+        <li class="current">Automatic deployment of Jekyll site to Github pages through Travis CI</li>
       
     
   </ol>
@@ -321,15 +321,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="How to run anaconda environment in Visual Studio Code terminal">
-    <meta itemprop="description" content="I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal.">
-    <meta itemprop="datePublished" content="September 20, 2018">
+    <meta itemprop="headline" content="Automatic deployment of Jekyll site to Github pages through Travis CI">
+    <meta itemprop="description" content="When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went with Jekyll again. The main reasons being I would like to learn Go, but not Hugo templating. Also I hate deployment and would like to use Github built pages. They are ideal for small websites with low enough traffic. But as per usual, whenever I make any decision, it kicks me in the back.">
+    <meta itemprop="datePublished" content="March 20, 2020">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">How to run anaconda environment in Visual Studio Code terminal
+          <h1 class="page__title" itemprop="headline">Automatic deployment of Jekyll site to Github pages through Travis CI
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -337,7 +337,7 @@
 
 
 
-  2 minute read
+  3 minute read
 
 </p>
           
@@ -346,37 +346,65 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>I love <a href="https://code.visualstudio.com/">Visual Studio Code</a>. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally python coding I use VSC. Atom always seemed sluggish, despite all my effort and even PC upgrade, and sublime was nice and fast, but it just misses bunch of programming features. VSC has somehting that I just fell in love since the first time I used it, and that was the integrated terminal.</p>
+        <p>When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went with Jekyll again. The main reasons being I would like to learn Go, but not Hugo templating. Also I hate deployment and would like to use Github built pages. They are ideal for small websites with low enough traffic. But as per usual, whenever I make any decision, it kicks me in the back.</p>
 
-<p>If you have Linux or a Mac, you are solid. If you run Windows, you might be slightly underwhelmed by the command prompt capabilities, until you install <a href="https://chocolatey.org/">Chocolatey</a>. I already sang praise about Chocolatey <a href="/programming/how-to-run-jekyll-on-windows/">here</a>, and it is a must for a Windows based programmer in my opinion. So now you have VSC running and you can prototype your code nad run it from the same window, amazing. BUT …</p>
+<p>Github works beautifully with Jekyll and can <a href="https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/">build it automatically</a>. But the issue is that for security reasons it doesn’t build unauthorised gems. Neither it works well with submodules, if you use them. Unfortunately, after much searching I decided to use the <a href="https://mmistakes.github.io/minimal-mistakes/about/">minimal-mistakes</a> template, which to some degree relies on non core jekyll plugins, such as jekyll-archive, it means that Github won’t include them in the build and the page won’t build properly. There are two main options:</p>
 
-<p>The main issue I came across was to run python code in <a href="https://anaconda.org">Anaconda</a>. I use Anaconda as it was recommended, therefore installing packages in separate environments for different purposes (see list of some of my envs <a href="https://github.com/hejtmy/python-envs">here</a>). I install almost nothing in the <em>root</em> environment, which is the default one that command prompt starts with when you open it. Another issue is that for some reason, I couldn’t change the VSC anaconda environment using the anaconda’s <code class="highlighter-rouge">activate *env*</code> command and it was still defaulting to the <em>root</em>. So when I am building markdown documentation with <a href="https://www.mkdocs.org/">mkdocs</a> and I need to load my <em>base</em> environment, I couldn’t run it in the VSC prompt. Luckily, there was a simple solution.</p>
+<ol>
+  <li>After coding and testing the site locally, build it and push the result to a gh-pages branch.
+    <ul>
+      <li><em>For obvious reasons I didn’t want to do that. For first, I can’t and I don’t want to install ruby on all pcs I work at. Secondly, building and pushing locally is just a pain that would have to be solved by some shell or python script, which would convolute everything and I just hated that idea.</em></li>
+    </ul>
+  </li>
+  <li>Use continuous integration such as <a href="https://travis-ci.org/">travis</a> to build the site and if it succeeds, push the result to gh-pages.
+    <ul>
+      <li><em>The only downside is that I need to keep the project open to use the free tiers of almost all CI providers, but the blog will be open anyway, so I didn’t mind.</em></li>
+    </ul>
+  </li>
+</ol>
 
-<p>Another great feature of the VSC is customizability in its settings file. The entire settings is in <em>.json</em>, which is genius, because you can easily share and copy settings between users or projects no hassle. No longer we are bound by describing to what menu you have to go to click on which button (love you <code class="highlighter-rouge">JetBrains</code> and I know you have your <em>.ini</em> files, but changing settings is often a chore). In VSC, you just create a <em>.vscode</em> folder with <em>settings.json</em> inside and you change what you wanna change. Difficult for a lay person, amazing for those who know what they are doing :)</p>
+<h2 id="process">Process</h2>
+<p>The process is fairly straightforward these days. It was a very convoluted process in 2017, but Travis now allows automated deploy to Github Pages, so you only need to tweak few parameters. Depending on if you are building your personal or project page, you should have the code and final build in different branches. See the difference <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites">here</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project-folder
-|-.vscode
-|---settings.json
+<ol>
+  <li>Make the project public, if you are using free tier of Travis.</li>
+  <li>Activate builds on the repository in Travis.</li>
+  <li>In Github -&gt; Settings -&gt; Developper Settings add new “Personal access token” for repo (just check <code class="highlighter-rouge">repo</code> (and all subcategories) and leave the rest empty). Name it appropriately and copy (it will only show once)</li>
+  <li>In travis settings for your repository, add this TOKEN to environment variables (remeber to keep it hidden)</li>
+  <li>Add the following .travis.yml to the project (this is for a project page, you will need to do some changes to build and deployment branches for personal site)</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>language: ruby
+rvm:
+- 2.5
+branches:
+  only:
+  - master
+install:
+- bundle install #make sure your bundle works locally :)
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination out #builds to out directory
+deploy:
+  provider: pages # github pages
+  local-dir: ./out 
+  target-branch: gh-pages
+  email: deploy@travis-ci.org
+  name: Deployment Bot
+  skip-cleanup: true
+  github-token: $TOKEN # The token you saved
+  keep-history: true # does only incremental builds
+  on:
+    branch: master
 </code></pre></div></div>
 
-<p>So if you want to run your python commands in the VSC terminal using a particular environment, you can just point it to that env with adding this line to the <em>settings.json</em> file.</p>
+<p>That is it :) You should have an automatically built and deployed jekyll blog. If something doesn’t work, just check this blog <code class="highlighter-rouge">.travis.yml</code> settings <a href="https://github.com/hejtmy/neuro-coder/blob/master/.travis.yml">here</a>, some settings might have changed between years and versions.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"python.pythonPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path-to-your-environment/python.exe"</span><span class="w"> 
-</span></code></pre></div></div>
+<h3 id="custom-domain">Custom domain</h3>
 
-<p>If you are unsure what the path is, you can always call <code class="highlighter-rouge">conda info --envs</code> and get it. This is output of mine,</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ai                       C:<span class="se">\P</span>rogramData<span class="se">\A</span>naconda3<span class="se">\e</span>nvs<span class="se">\a</span>i
-base                     C:<span class="se">\P</span>rogramData<span class="se">\A</span>naconda3<span class="se">\e</span>nvs<span class="se">\b</span>ase
-root                  <span class="k">*</span>  C:<span class="se">\P</span>rogramData<span class="se">\A</span>naconda3
-</code></pre></div></div>
+<p>If you are using a custom domain you can follow <a href="https://github.com/hejtmy/neuro-coder/blob/master/.travis.yml">this tutorial</a>.</p>
 
-<p>So in the end, if I want to run my project in the <em>ai</em> environment, I’d just change my settings.json to:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//settings.json</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">platform</span><span class="w"> </span><span class="err">agnostic</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">folder</span><span class="w"> </span><span class="err">separators,</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">can</span><span class="w"> </span><span class="err">use</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="err">even</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">windows</span><span class="w">
-</span><span class="p">{</span><span class="w">
-	</span><span class="nl">"python.pythonPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:/ProgramData/Anaconda3/envs/ai/python.exe"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Potential issue can with the base url, as all links in the project were broken on my first try. Gh-pages will create all links relative to the user base page, not relative to the project page. This got fixed in future versions of Jekyll, but it was a pain in 2017-19, where I needed different setup for local and for production deployments. Luckily, URL handling was taken care of by the <code class="highlighter-rouge">minimal-mistakes</code> gem, but regardless, this wasn’t the simplest thing to solve (for sure the fact I totally forgot that something like url and baseurl exists in jekyll was not helpful).</p>
 
         
       </section>
@@ -397,19 +425,15 @@ root                  <span class="k">*</span>  C:<span class="se">\P</span>rogr
     
       
       
-      <a href="/tags/anaconda" class="page__taxonomy-item" rel="tag">anaconda</a><span class="sep">, </span>
+      <a href="/tags/ci" class="page__taxonomy-item" rel="tag">CI</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/python" class="page__taxonomy-item" rel="tag">python</a><span class="sep">, </span>
+      <a href="/tags/jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/tips" class="page__taxonomy-item" rel="tag">tips</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/visual-studio-code" class="page__taxonomy-item" rel="tag">visual-studio-code</a>
+      <a href="/tags/travis" class="page__taxonomy-item" rel="tag">travis</a>
     
     </span>
   </p>
@@ -437,7 +461,7 @@ root                  <span class="k">*</span>  C:<span class="se">\P</span>rogr
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-20T15:16:01+00:00">September 20, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-03-20T15:16:16+00:00">March 20, 2020</time></p>
         
       </footer>
 
@@ -446,23 +470,22 @@ root                  <span class="k">*</span>  C:<span class="se">\P</span>rogr
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=How+to+run+anaconda+environment+in+Visual+Studio+Code+terminal%20http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fvisual-studio-code-anaconda%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Automatic+deployment+of+Jekyll+site+to+Github+pages+through+Travis+CI%20http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fjekyll-travis-github%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fvisual-studio-code-anaconda%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fjekyll-travis-github%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fvisual-studio-code-anaconda%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fneuro-coder.com%2Fprogramming%2Fjekyll-travis-github%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/gamedev/sending-information-unity-browser/" class="pagination--pager" title="How to send information from Unity to a web browser - part I.
+      <a href="/programming/how-to-run-jekyll-on-windows/" class="pagination--pager" title="How to run jekyll on windows
 ">Previous</a>
     
     
-      <a href="/programming/how-to-run-jekyll-on-windows/" class="pagination--pager" title="How to run jekyll on windows
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -476,34 +499,6 @@ root                  <span class="k">*</span>  C:<span class="se">\P</span>rogr
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/programming/jekyll-travis-github/" rel="permalink">Automatic deployment of Jekyll site to Github pages through Travis CI
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on ...</p>
-  </article>
-</div>
-
         
           
 
@@ -529,6 +524,34 @@ root                  <span class="k">*</span>  C:<span class="se">\P</span>rogr
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Jekyll is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then conver...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/programming/visual-studio-code-anaconda/" rel="permalink">How to run anaconda environment in Visual Studio Code terminal
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I love Visual Studio Code. I tried Atom, I tried Sublime, I use Notepadd++ for text editing, but for javascript coding, markdown, blogging and occasionally p...</p>
   </article>
 </div>
 

@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://neuro-coder.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://neuro-coder.com/" rel="alternate" type="text/html" /><updated>2020-03-19T23:36:18+00:00</updated><id>http://neuro-coder.com/feed.xml</id><title type="html">Neuro Coder</title><subtitle>A site about coding, neuroscience and occasional posts about games and IoT.</subtitle><author><name>Lukáš Hejtmánek</name><email>hejtmy@gmail.com</email></author><entry><title type="html">How to run jekyll on windows</title><link href="http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/" rel="alternate" type="text/html" title="How to run jekyll on windows" /><published>2018-09-23T15:16:01+00:00</published><updated>2018-09-23T15:16:01+00:00</updated><id>http://neuro-coder.com/programming/how-to-run-jekyll-on-windows</id><content type="html" xml:base="http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://neuro-coder.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://neuro-coder.com/" rel="alternate" type="text/html" /><updated>2020-03-20T23:25:15+00:00</updated><id>http://neuro-coder.com/feed.xml</id><title type="html">Neuro Coder</title><subtitle>A site about coding, neuroscience and occasional posts about games and IoT.</subtitle><author><name>Lukáš Hejtmánek</name><email>hejtmy@gmail.com</email></author><entry><title type="html">Automatic deployment of Jekyll site to Github pages through Travis CI</title><link href="http://neuro-coder.com/programming/jekyll-travis-github/" rel="alternate" type="text/html" title="Automatic deployment of Jekyll site to Github pages through Travis CI" /><published>2020-03-20T15:16:16+00:00</published><updated>2020-03-20T15:16:16+00:00</updated><id>http://neuro-coder.com/programming/jekyll-travis-github</id><content type="html" xml:base="http://neuro-coder.com/programming/jekyll-travis-github/">&lt;p&gt;When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went with Jekyll again. The main reasons being I would like to learn Go, but not Hugo templating. Also I hate deployment and would like to use Github built pages. They are ideal for small websites with low enough traffic. But as per usual, whenever I make any decision, it kicks me in the back.&lt;/p&gt;
+
+&lt;p&gt;Github works beautifully with Jekyll and can &lt;a href=&quot;https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/&quot;&gt;build it automatically&lt;/a&gt;. But the issue is that for security reasons it doesn’t build unauthorised gems. Neither it works well with submodules, if you use them. Unfortunately, after much searching I decided to use the &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/about/&quot;&gt;minimal-mistakes&lt;/a&gt; template, which to some degree relies on non core jekyll plugins, such as jekyll-archive, it means that Github won’t include them in the build and the page won’t build properly. There are two main options:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;After coding and testing the site locally, build it and push the result to a gh-pages branch.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;For obvious reasons I didn’t want to do that. For first, I can’t and I don’t want to install ruby on all pcs I work at. Secondly, building and pushing locally is just a pain that would have to be solved by some shell or python script, which would convolute everything and I just hated that idea.&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Use continuous integration such as &lt;a href=&quot;https://travis-ci.org/&quot;&gt;travis&lt;/a&gt; to build the site and if it succeeds, push the result to gh-pages.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;The only downside is that I need to keep the project open to use the free tiers of almost all CI providers, but the blog will be open anyway, so I didn’t mind.&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;process&quot;&gt;Process&lt;/h2&gt;
+&lt;p&gt;The process is fairly straightforward these days. It was a very convoluted process in 2017, but Travis now allows automated deploy to Github Pages, so you only need to tweak few parameters. Depending on if you are building your personal or project page, you should have the code and final build in different branches. See the difference &lt;a href=&quot;https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make the project public, if you are using free tier of Travis.&lt;/li&gt;
+  &lt;li&gt;Activate builds on the repository in Travis.&lt;/li&gt;
+  &lt;li&gt;In Github -&amp;gt; Settings -&amp;gt; Developper Settings add new “Personal access token” for repo (just check &lt;code class=&quot;highlighter-rouge&quot;&gt;repo&lt;/code&gt; (and all subcategories) and leave the rest empty). Name it appropriately and copy (it will only show once)&lt;/li&gt;
+  &lt;li&gt;In travis settings for your repository, add this TOKEN to environment variables (remeber to keep it hidden)&lt;/li&gt;
+  &lt;li&gt;Add the following .travis.yml to the project (this is for a project page, you will need to do some changes to build and deployment branches for personal site)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;language: ruby
+rvm:
+- 2.5
+branches:
+  only:
+  - master
+install:
+- bundle install #make sure your bundle works locally :)
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination out #builds to out directory
+deploy:
+  provider: pages # github pages
+  local-dir: ./out 
+  target-branch: gh-pages
+  email: deploy@travis-ci.org
+  name: Deployment Bot
+  skip-cleanup: true
+  github-token: $TOKEN # The token you saved
+  keep-history: true # does only incremental builds
+  on:
+    branch: master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That is it :) You should have an automatically built and deployed jekyll blog. If something doesn’t work, just check this blog &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; settings &lt;a href=&quot;https://github.com/hejtmy/neuro-coder/blob/master/.travis.yml&quot;&gt;here&lt;/a&gt;, some settings might have changed between years and versions.&lt;/p&gt;
+
+&lt;h3 id=&quot;custom-domain&quot;&gt;Custom domain&lt;/h3&gt;
+
+&lt;p&gt;If you are using a custom domain you can follow &lt;a href=&quot;https://github.com/hejtmy/neuro-coder/blob/master/.travis.yml&quot;&gt;this tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h2&gt;
+&lt;p&gt;Potential issue can with the base url, as all links in the project were broken on my first try. Gh-pages will create all links relative to the user base page, not relative to the project page. This got fixed in future versions of Jekyll, but it was a pain in 2017-19, where I needed different setup for local and for production deployments. Luckily, URL handling was taken care of by the &lt;code class=&quot;highlighter-rouge&quot;&gt;minimal-mistakes&lt;/code&gt; gem, but regardless, this wasn’t the simplest thing to solve (for sure the fact I totally forgot that something like url and baseurl exists in jekyll was not helpful).&lt;/p&gt;</content><author><name>Lukáš Hejtmánek</name><email>hejtmy@gmail.com</email></author><category term="travis" /><category term="CI" /><category term="jekyll" /><summary type="html">When I started writing posts for this blog I returned to Jekyll again after about a year long break. I was thinking about using GO and Hugo instead (more on Hugo in the future), which was praised for its speed and fairly compact install, but in the end I went with Jekyll again. The main reasons being I would like to learn Go, but not Hugo templating. Also I hate deployment and would like to use Github built pages. They are ideal for small websites with low enough traffic. But as per usual, whenever I make any decision, it kicks me in the back.</summary></entry><entry><title type="html">How to run jekyll on windows</title><link href="http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/" rel="alternate" type="text/html" title="How to run jekyll on windows" /><published>2018-09-23T15:16:01+00:00</published><updated>2018-09-23T15:16:01+00:00</updated><id>http://neuro-coder.com/programming/how-to-run-jekyll-on-windows</id><content type="html" xml:base="http://neuro-coder.com/programming/how-to-run-jekyll-on-windows/">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a static page generator which this blogs run on. It basically takes markdown files, html templates and few css and javascript files and then convert them all into a static html website. So every new article you add, every change rebuilds the page completely. Unlike in Wordpress, there are no logons, there is no database - which makes the blog run fast, run anywhere and run secure. But it it also a little bit tricky for those without much programming backgroud to get into. There are many sites online to teach you how to jekyll, but this is just to give you a brief overview of how to make everything run on Windows.&lt;/p&gt;
 
 &lt;p&gt;More technically, Jekyll is a ruby gem. It is fairly straightforward to run it on Unix systems, but it used to be pain to run it on Windows. People used somewhat complicated &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;multi installer setups&lt;/a&gt; or were running it on the amazing &lt;a href=&quot;https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/&quot;&gt;Windows Linux Bash Shell&lt;/a&gt; - which had it’s issues with continuous file tracking. But everything changed with the brilliant &lt;a href=&quot;https://chocolatey.org/&quot;&gt;Chocolatey&lt;/a&gt;!&lt;/p&gt;
 
